@@ -15,7 +15,7 @@ protocol Service {
     func removeAll()
 }
 
-class MoneySaverService: Service {
+final class MoneySaverService: Service {
     var repository: Repository!
     
     func save() {
