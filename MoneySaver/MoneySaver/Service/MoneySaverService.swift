@@ -16,5 +16,29 @@ protocol Service {
 }
 
 class MoneySaverService: Service {
+    var repository: Repository!
     
+    func save() {
+        repository.save()
+    }
+    
+    func fetch(completion: @escaping ([Challenge]) -> ()) {
+        repository.fetch { challenges in
+            completion(challenges)
+        }
+    }
+    
+    func fetch(completion: @escaping ([Consumption]) -> ()) {
+        repository.fetch { consumptions in
+            completion(consumptions)
+        }
+    }
+    
+    func removeAll() {
+        repository.removeAll()
+    }
+
+    init(repository: Repository) {
+        self.repository = repository
+    }
 }
