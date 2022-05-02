@@ -34,4 +34,31 @@ class SQLiteRepository {
             print(error)
         }
     }
+    
+    func fetchConsumption(completion: @escaping ([Consumption]) -> ()) {
+        let context = CoreDataStack.shared.viewContext
+
+        let fetchConsumption: NSFetchRequest<Consumption> = Consumption.fetchRequest()
+
+        do {
+            let consumption = try context.fetch(fetchConsumption)
+            completion(consumption)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func removeAll() {
+        let context = CoreDataStack.shared.viewContext
+        
+        let fetchChallenge = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
+        let fetchConsumption = NSBatchDeleteRequest(fetchRequest: Consumption.fetchRequest())
+        
+        do {
+            try context.execute(fetchChallenge)
+            try context.execute(fetchConsumption)
+        } catch {
+            print(error)
+        }
+    }
 }
