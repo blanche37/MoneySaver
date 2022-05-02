@@ -17,6 +17,7 @@
 		43D9BAE2281FD46400FA1476 /* MoneySaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAE1281FD46400FA1476 /* MoneySaverTests.swift */; };
 		43D9BAEC281FD46400FA1476 /* MoneySaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAEB281FD46400FA1476 /* MoneySaverUITests.swift */; };
 		43D9BAEE281FD46400FA1476 /* MoneySaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAED281FD46400FA1476 /* MoneySaverUITestsLaunchTests.swift */; };
+		43D9BAFC281FD54200FA1476 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 43D9BAFB281FD54200FA1476 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D9BAFC281FD54200FA1476 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,9 @@
 			dependencies = (
 			);
 			name = MoneySaver;
+			packageProductDependencies = (
+				43D9BAFB281FD54200FA1476 /* Charts */,
+			);
 			productName = MoneySaver;
 			productReference = 43D9BAC4281FD46200FA1476 /* MoneySaver.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 43D9BABB281FD46200FA1476;
+			packageReferences = (
+				43D9BAFA281FD54200FA1476 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 43D9BAC5281FD46200FA1476 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -606,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43D9BAFA281FD54200FA1476 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43D9BAFB281FD54200FA1476 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43D9BAFA281FD54200FA1476 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		43D9BAD0281FD46200FA1476 /* MoneySaver.xcdatamodeld */ = {
