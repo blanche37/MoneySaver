@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class SQLiteRepository {
     func saveContext() {
@@ -18,6 +19,19 @@ class SQLiteRepository {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    func fetchChallenge(completion: @escaping ([Challenge]) -> ()) {
+        let context = CoreDataStack.shared.viewContext
+
+        let fetchChallenge: NSFetchRequest<Challenge> = Challenge.fetchRequest()
+
+        do {
+            let challenge = try context.fetch(fetchChallenge)
+            completion(challenge)
+        } catch {
+            print(error)
         }
     }
 }
