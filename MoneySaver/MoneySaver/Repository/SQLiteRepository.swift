@@ -8,7 +8,14 @@
 import Foundation
 import CoreData
 
-class SQLiteRepository {
+protocol Repository {
+    func save()
+    func fetch(completion: @escaping ([Challenge]) -> ())
+    func fetch(completion: @escaping ([Consumption]) -> ())
+    func removeAll()
+}
+
+class SQLiteRepository: Repository {
     func save() {
         let context = CoreDataStack.shared.viewContext
         
