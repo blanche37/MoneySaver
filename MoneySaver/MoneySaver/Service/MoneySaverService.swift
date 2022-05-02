@@ -7,6 +7,10 @@
 
 import Foundation
 
-class MoneySaverService {
+protocol Service {
+    
+}
+
+class MoneySaverService: Service {
     
 }
