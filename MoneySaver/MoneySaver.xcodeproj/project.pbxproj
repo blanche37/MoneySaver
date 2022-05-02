@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		436FCF0D281FE01000AF09BC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF0C281FE01000AF09BC /* CoreDataStack.swift */; };
+		436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF0F281FE17500AF09BC /* SQLiteRepository.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		436FCF0C281FE01000AF09BC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		436FCF0F281FE17500AF09BC /* SQLiteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteRepository.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		436FCF0E281FE16000AF09BC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				436FCF0F281FE17500AF09BC /* SQLiteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		43D9BABB281FD46200FA1476 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 			children = (
 				43D9BAFD281FD9FC00FA1476 /* App */,
 				43D9BAFE281FDA0600FA1476 /* View */,
+				436FCF0E281FE16000AF09BC /* Repository */,
 				43D9BAFF281FDA3E00FA1476 /* CoreData */,
 				43D9BACD281FD46200FA1476 /* Main.storyboard */,
 				43D9BAD5281FD46400FA1476 /* LaunchScreen.storyboard */,
@@ -299,6 +310,7 @@
 				43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */,
 				43D9BACC281FD46200FA1476 /* ViewController.swift in Sources */,
 				436FCF0D281FE01000AF09BC /* CoreDataStack.swift in Sources */,
+				436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
 			);
