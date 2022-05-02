@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class SQLiteRepository {
-    func saveContext() {
+    func save() {
         let context = CoreDataStack.shared.viewContext
         
         if context.hasChanges {
@@ -22,7 +22,7 @@ class SQLiteRepository {
         }
     }
     
-    func fetchChallenge(completion: @escaping ([Challenge]) -> ()) {
+    func fetch(completion: @escaping ([Challenge]) -> ()) {
         let context = CoreDataStack.shared.viewContext
 
         let fetchChallenge: NSFetchRequest<Challenge> = Challenge.fetchRequest()
@@ -35,7 +35,7 @@ class SQLiteRepository {
         }
     }
     
-    func fetchConsumption(completion: @escaping ([Consumption]) -> ()) {
+    func fetch(completion: @escaping ([Consumption]) -> ()) {
         let context = CoreDataStack.shared.viewContext
 
         let fetchConsumption: NSFetchRequest<Consumption> = Consumption.fetchRequest()
