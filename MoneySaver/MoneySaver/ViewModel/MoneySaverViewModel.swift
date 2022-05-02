@@ -10,3 +10,7 @@ import Foundation
 protocol ViewModel {
     
 }
+
+final class MoneySaverViewModel: ViewModel {
+    
+}
