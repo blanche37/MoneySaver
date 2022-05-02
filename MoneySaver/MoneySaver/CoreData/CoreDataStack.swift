@@ -12,7 +12,7 @@ class CoreDataStack {
     static let shared = CoreDataStack()
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Person")
+        let container = NSPersistentContainer(name: "MoneySaver")
         let description = NSPersistentStoreDescription()
         description.type = NSSQLiteStoreType
         container.persistentStoreDescriptions = [description]
