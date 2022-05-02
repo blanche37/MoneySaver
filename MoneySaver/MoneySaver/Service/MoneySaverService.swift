@@ -12,7 +12,7 @@ protocol Service {
     func save()
     func fetchChallenges(completion: @escaping ([Challenge]) -> ())
     func fetchConsumptions(completion: @escaping ([Consumption]) -> ())
-    func removeAll()
+    func removeAll(completion: @escaping () -> ())
 }
 
 final class MoneySaverService: Service {
@@ -34,8 +34,9 @@ final class MoneySaverService: Service {
         }
     }
     
-    func removeAll() {
+    func removeAll(completion: @escaping () -> ()) {
         repository.removeAll()
+        completion()
     }
 
     init(repository: Repository) {
