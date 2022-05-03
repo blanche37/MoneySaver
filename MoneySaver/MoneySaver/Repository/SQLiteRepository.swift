@@ -15,7 +15,7 @@ protocol Repository {
     func removeAll()
 }
 
-class SQLiteRepository: Repository {
+final class SQLiteRepository: Repository {
     func save() {
         let context = CoreDataStack.shared
         

@@ -8,5 +8,5 @@
 import XCTest
 @testable import MoneySaver
 
-class MoneySaverTests: XCTestCase {
+final class MoneySaverTests: XCTestCase {
 }

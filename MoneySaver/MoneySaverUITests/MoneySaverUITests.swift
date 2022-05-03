@@ -7,7 +7,7 @@
 
 import XCTest
 
-class MoneySaverUITests: XCTestCase {
+final class MoneySaverUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
