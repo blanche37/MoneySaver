@@ -14,7 +14,7 @@
 		436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
-		43D9BACC281FD46200FA1476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ViewController.swift */; };
+		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
 		43D9BACF281FD46200FA1476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D9BACD281FD46200FA1476 /* Main.storyboard */; };
 		43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAD0281FD46200FA1476 /* MoneySaver.xcdatamodeld */; };
 		43D9BAD4281FD46400FA1476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9BAD3281FD46400FA1476 /* Assets.xcassets */; };
@@ -51,7 +51,7 @@
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43D9BACB281FD46200FA1476 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43D9BACB281FD46200FA1476 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		43D9BACE281FD46200FA1476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43D9BAD1281FD46200FA1476 /* MoneySaver.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneySaver.xcdatamodel; sourceTree = "<group>"; };
 		43D9BAD3281FD46400FA1476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		43D9BAFE281FDA0600FA1476 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43D9BACB281FD46200FA1476 /* ViewController.swift */,
+				43D9BACB281FD46200FA1476 /* ListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				436FCF19281FF69800AF09BC /* Observable.swift in Sources */,
 				436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */,
 				43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */,
-				43D9BACC281FD46200FA1476 /* ViewController.swift in Sources */,
+				43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */,
 				436FCF0D281FE01000AF09BC /* CoreDataStack.swift in Sources */,
 				436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */,
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
