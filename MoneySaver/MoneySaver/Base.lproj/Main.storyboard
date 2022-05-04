@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +15,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKo-K7-krT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="MyBlue"/>
+                        <color key="tintColor" name="MyGray"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="MyWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -35,4 +41,15 @@
             <point key="canvasLocation" x="230" y="-167"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="MyBlue">
+            <color red="0.078431372549019607" green="0.39215686274509803" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MyGray">
+            <color red="0.86274509803921573" green="0.90196078431372551" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MyWhite">
+            <color red="0.96078431372549022" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
