@@ -86,15 +86,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="31"/>
+            <point key="canvasLocation" x="-532" y="25"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="MyBlue">
-            <color red="0.078431372549019607" green="0.39215686274509803" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.3919999897480011" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MyLightBlue">
-            <color red="0.90196078431372551" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.90200001001358032" green="0.98000001907348633" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

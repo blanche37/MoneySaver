@@ -8,7 +8,8 @@
 import UIKit
 
 final class ListViewController: UIViewController {
-
+    var viewModel: ViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
