@@ -2,7 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Challenge" representedClassName="Challenge" syncable="YES" codeGenerationType="class">
         <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="period" optional="YES" attributeType="String"/>
+        <attribute name="period" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Consumption" representedClassName="Consumption" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -10,7 +11,7 @@
         <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Challenge" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="Challenge" positionX="-228.1400146484375" positionY="4.534637451171875" width="128" height="88"/>
         <element name="Consumption" positionX="-54" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

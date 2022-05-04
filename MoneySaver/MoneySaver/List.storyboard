@@ -82,6 +82,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="r9U-rV-FI0" secondAttribute="bottom" id="yVd-CR-Tmx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="r9U-rV-FI0" id="jkz-tT-A9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
