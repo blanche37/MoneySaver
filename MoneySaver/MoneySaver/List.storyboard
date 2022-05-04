@@ -51,7 +51,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="2yf-9H-wZz" id="7pT-Wa-C0J"/>
+                                            <outlet property="dateLabel" destination="CNO-jN-NR0" id="Q67-Tx-XrV"/>
                                             <outlet property="itemLabel" destination="sTe-PT-BAy" id="D56-bC-LNa"/>
                                             <outlet property="priceLabel" destination="jSW-GW-e8v" id="59E-61-Gnf"/>
                                         </connections>
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342.02898550724638" y="71.651785714285708"/>
+            <point key="canvasLocation" x="-413" y="31"/>
         </scene>
     </scenes>
     <resources>
