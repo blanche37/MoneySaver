@@ -11,10 +11,11 @@ final class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setRightBarButtonItem()
+        setNavigationBar()
     }
     
-    private func setRightBarButtonItem() {
+    private func setNavigationBar() {
+        title = "Challenges"
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         navigationItem.rightBarButtonItem = addItem
     }
