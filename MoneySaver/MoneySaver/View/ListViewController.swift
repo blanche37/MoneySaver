@@ -16,16 +16,9 @@ final class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
     }
     
-    private func setNavigationBar() {
-        title = "Challenges"
-        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
-        navigationItem.rightBarButtonItem = addItem
-    }
-    
-    @objc func addItem() {
+    @IBAction func AddItem(_ sender: UIBarButtonItem) {
         let actionSheet = UIAlertController(title: "기간을 선택하세요.", message: nil, preferredStyle: .actionSheet)
         
         let month = UIAlertAction(title: "30 Days", style: .default) { [weak self] _ in

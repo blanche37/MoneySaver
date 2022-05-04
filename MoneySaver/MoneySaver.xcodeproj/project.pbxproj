@@ -12,7 +12,6 @@
 		436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF15281FF28800AF09BC /* MoneySaverService.swift */; };
 		436FCF19281FF69800AF09BC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF18281FF69800AF09BC /* Observable.swift */; };
 		436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */; };
-		4385689D28218F9A0086A4AE /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4385689C28218F9A0086A4AE /* List.storyboard */; };
 		4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385689E28223FCB0086A4AE /* ConsumptionCell.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
@@ -50,7 +49,6 @@
 		436FCF15281FF28800AF09BC /* MoneySaverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverService.swift; sourceTree = "<group>"; };
 		436FCF18281FF69800AF09BC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverViewModel.swift; sourceTree = "<group>"; };
-		4385689C28218F9A0086A4AE /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		4385689E28223FCB0086A4AE /* ConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCell.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				436FCF0E281FE16000AF09BC /* Repository */,
 				43D9BAFF281FDA3E00FA1476 /* CoreData */,
 				43D9BACD281FD46200FA1476 /* Main.storyboard */,
-				4385689C28218F9A0086A4AE /* List.storyboard */,
 				43D9BAD5281FD46400FA1476 /* LaunchScreen.storyboard */,
 				43D9BAD3281FD46400FA1476 /* Assets.xcassets */,
 				43D9BAD8281FD46400FA1476 /* Info.plist */,
@@ -313,7 +310,6 @@
 			files = (
 				43D9BAD7281FD46400FA1476 /* LaunchScreen.storyboard in Resources */,
 				43D9BAD4281FD46400FA1476 /* Assets.xcassets in Resources */,
-				4385689D28218F9A0086A4AE /* List.storyboard in Resources */,
 				43D9BACF281FD46200FA1476 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
