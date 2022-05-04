@@ -8,6 +8,8 @@
 import UIKit
 
 class ConsumptionCell: UITableViewCell {
-    
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var dateLabel: UIView!
 }
 
