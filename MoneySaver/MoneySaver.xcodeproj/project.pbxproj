@@ -13,6 +13,7 @@
 		436FCF19281FF69800AF09BC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF18281FF69800AF09BC /* Observable.swift */; };
 		436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */; };
 		4385689D28218F9A0086A4AE /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4385689C28218F9A0086A4AE /* List.storyboard */; };
+		4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385689E28223FCB0086A4AE /* ConsumptionCell.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
@@ -50,6 +51,7 @@
 		436FCF18281FF69800AF09BC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverViewModel.swift; sourceTree = "<group>"; };
 		4385689C28218F9A0086A4AE /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		4385689E28223FCB0086A4AE /* ConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCell.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				43D9BACB281FD46200FA1476 /* ListViewController.swift */,
+				4385689E28223FCB0086A4AE /* ConsumptionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				436FCF19281FF69800AF09BC /* Observable.swift in Sources */,
+				4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */,
 				436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */,
 				43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */,
 				43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */,
