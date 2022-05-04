@@ -11,6 +11,16 @@ final class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setRightBarButtonItem()
+    }
+    
+    private func setRightBarButtonItem() {
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
+        navigationItem.rightBarButtonItem = addItem
+    }
+    
+    @objc func addItem() {
+        
     }
 }
 
