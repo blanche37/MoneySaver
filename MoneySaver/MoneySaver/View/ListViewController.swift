@@ -8,6 +8,10 @@
 import UIKit
 import CoreData
 
+protocol RefreshDelegate: AnyObject {
+    func refresh()
+}
+
 final class ListViewController: UIViewController {
     lazy var viewModel: ViewModel = MoneySaverViewModel(service: service)
     lazy var service: Service = MoneySaverService(repository: repository)
@@ -21,99 +25,14 @@ final class ListViewController: UIViewController {
     @IBAction func presentAddItemViewController(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "AddItem", bundle: nil)
         
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "a") as? UINavigationController else {
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "a") as? UINavigationController,
+              let childVC = vc.viewControllers.first as? AddItemViewController else {
             return
         }
         
+        childVC.viewModel = self.viewModel
+        childVC.refreshDelegate = self
         self.present(vc, animated: true)
-    }
-    
-    @IBAction func AddItem(_ sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: "기간을 선택하세요.", message: nil, preferredStyle: .actionSheet)
-        
-        let month = UIAlertAction(title: "30 Days", style: .default) { [weak self] _ in
-            guard let self = self else {
-                return
-            }
-            let date = Date()
-            if let expiration = Calendar.current.date(byAdding: .day, value: 30, to: date) {
-                self.presentAlertForChallenge(expiration: expiration)
-            }
-        }
-        
-        let week = UIAlertAction(title: "7 Days", style: .default) { [weak self] _ in
-            guard let self = self else {
-                return
-            }
-            let date = Date()
-            if let expiration = Calendar.current.date(byAdding: .day, value: 7, to: date) {
-                self.presentAlertForChallenge(expiration: expiration)
-            }
-        }
-        
-        let day = UIAlertAction(title: "1 Day", style: .default) { [weak self] _ in
-            guard let self = self else {
-                return
-            }
-            let date = Date()
-            if let expiration = Calendar.current.date(byAdding: .day, value: 1, to: date) {
-                self.presentAlertForChallenge(expiration: expiration)
-            }
-        }
-        
-        let cancel = UIAlertAction(title: "cancel", style: .cancel)
-        
-        [month, week, day, cancel].forEach { actionSheet.addAction($0) }
-        
-        present(actionSheet, animated: true)
-    }
-    
-    private func presentAlertForChallenge(expiration: Date) {
-        let alert = UIAlertController(title: "목표를 입력하세요.", message: nil, preferredStyle: .alert)
-        
-        let submit = UIAlertAction(title: "submit", style: .default) { [weak self] _ in
-            
-            guard let self = self,
-                  let title = alert.textFields?.first?.text,
-                  let money = alert.textFields?.last?.text.flatMap({Int($0)}) else {
-                return
-            }
-            
-            let context = CoreDataStack.shared.viewContext
-            
-            let entity = NSEntityDescription.entity(forEntityName: "Challenge", in: context)
-            
-            if let entity = entity {
-                let challenge = NSManagedObject(entity: entity, insertInto: context)
-                challenge.setValue(title, forKey: "title")
-                challenge.setValue(expiration, forKey: "period")
-                challenge.setValue(money, forKey: "money")
-                
-                self.viewModel.challenges.value.append(challenge)
-                do {
-                    try context.save()
-                    self.tableView.reloadData()
-                    print(self.viewModel.challenges)
-                } catch {
-                    print(error)
-                }
-            }
-            
-
-        }
-        
-        let cancel = UIAlertAction(title: "cancel", style: .cancel)
-        
-        alert.addTextField {
-            $0.placeholder = "목표를 입력하세요."
-        }
-        
-        alert.addTextField {
-            $0.placeholder = "목표금액을 입력하세요."
-        }
-        
-        [submit, cancel].forEach { alert.addAction($0) }
-        present(alert, animated: true)
     }
 }
 
@@ -146,6 +65,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
+    }
+}
+
+extension ListViewController: RefreshDelegate {
+    func refresh() {
+        tableView.reloadData()
     }
 }
 
