@@ -18,6 +18,16 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func presentAddItemViewController(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "AddItem", bundle: nil)
+        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "a") as? UINavigationController else {
+            return
+        }
+        
+        self.present(vc, animated: true)
+    }
+    
     @IBAction func AddItem(_ sender: UIBarButtonItem) {
         let actionSheet = UIAlertController(title: "기간을 선택하세요.", message: nil, preferredStyle: .actionSheet)
         

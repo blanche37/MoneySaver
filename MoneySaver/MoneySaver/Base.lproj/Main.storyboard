@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Hji-hA-9Et">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vce-Ya-hEi" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overCurrentContext" id="vce-Ya-hEi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKo-K7-krT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -33,7 +33,7 @@
         <!--Challenges-->
         <scene sceneID="a1S-vr-YPP">
             <objects>
-                <viewController storyboardIdentifier="ListViewController" id="1H7-zt-S8j" customClass="ListViewController" customModule="MoneySaver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overCurrentContext" id="1H7-zt-S8j" customClass="ListViewController" customModule="MoneySaver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jkc-zM-EVw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QqL-bL-y2j">
                             <color key="tintColor" name="MyGray"/>
                             <connections>
-                                <action selector="AddItem:" destination="1H7-zt-S8j" id="AtK-LA-vwe"/>
+                                <action selector="presentAddItemViewController:" destination="1H7-zt-S8j" id="A71-cz-1yl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrT-lx-UpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="-167"/>
+            <point key="canvasLocation" x="398.55072463768118" y="-167.41071428571428"/>
         </scene>
     </scenes>
     <resources>

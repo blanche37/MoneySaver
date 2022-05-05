@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F1AD128228C410015F2B5 /* AddItemViewController.swift */; };
+		432F1AD42822BBC40015F2B5 /* AddItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432F1AD32822BBC30015F2B5 /* AddItem.storyboard */; };
 		436FCF0D281FE01000AF09BC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF0C281FE01000AF09BC /* CoreDataStack.swift */; };
 		436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF0F281FE17500AF09BC /* SQLiteRepository.swift */; };
 		436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF15281FF28800AF09BC /* MoneySaverService.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		432F1AD128228C410015F2B5 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		432F1AD32822BBC30015F2B5 /* AddItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddItem.storyboard; sourceTree = "<group>"; };
 		436FCF0C281FE01000AF09BC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		436FCF0F281FE17500AF09BC /* SQLiteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteRepository.swift; sourceTree = "<group>"; };
 		436FCF15281FF28800AF09BC /* MoneySaverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverService.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				436FCF0E281FE16000AF09BC /* Repository */,
 				43D9BAFF281FDA3E00FA1476 /* CoreData */,
 				43D9BACD281FD46200FA1476 /* Main.storyboard */,
+				432F1AD32822BBC30015F2B5 /* AddItem.storyboard */,
 				43D9BAD5281FD46400FA1476 /* LaunchScreen.storyboard */,
 				43D9BAD3281FD46400FA1476 /* Assets.xcassets */,
 				43D9BAD8281FD46400FA1476 /* Info.plist */,
@@ -185,6 +190,7 @@
 			children = (
 				43D9BACB281FD46200FA1476 /* ListViewController.swift */,
 				4385689E28223FCB0086A4AE /* ConsumptionCell.swift */,
+				432F1AD128228C410015F2B5 /* AddItemViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D9BAD7281FD46400FA1476 /* LaunchScreen.storyboard in Resources */,
+				432F1AD42822BBC40015F2B5 /* AddItem.storyboard in Resources */,
 				43D9BAD4281FD46400FA1476 /* Assets.xcassets in Resources */,
 				43D9BACF281FD46200FA1476 /* Main.storyboard in Resources */,
 			);
@@ -345,6 +352,7 @@
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
+				432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
