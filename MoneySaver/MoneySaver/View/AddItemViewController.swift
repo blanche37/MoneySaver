@@ -36,7 +36,6 @@ final class AddItemViewController: UIViewController {
     
     @IBAction func addItem(_ sender: UIButton) {
         presentingViewController?.dismiss(animated: true) { [weak self] in
-            //value에 세그먼트값
             guard let self = self,
                   let currency = self.currencySegmentedControl.titleForSegment(at: self.currencySegmentedControl.selectedSegmentIndex),
                   let expiration = self.periodSegmentedControl.titleForSegment(at: self.periodSegmentedControl.selectedSegmentIndex),
