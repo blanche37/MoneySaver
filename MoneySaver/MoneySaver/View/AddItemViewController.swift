@@ -13,11 +13,11 @@ class AddItemViewController: UIViewController {
     
     
     @IBAction func dismiss(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
+        presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func addItem(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
