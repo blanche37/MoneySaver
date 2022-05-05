@@ -60,7 +60,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="$"/>
-                                    <segment title=""/>
+                                    <segment title="₩"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-hs-bca">
@@ -88,7 +88,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currencySegmentedControl" destination="VGG-8N-xhY" id="f6b-2H-QbU"/>
                         <outlet property="moneyTextField" destination="jQD-lu-LoG" id="647-cs-BOc"/>
+                        <outlet property="periodSegmentedControl" destination="abc-OJ-oz7" id="L96-WV-u7e"/>
                         <outlet property="titleTextField" destination="QCX-D4-kH4" id="yGs-sR-mcO"/>
                     </connections>
                 </viewController>

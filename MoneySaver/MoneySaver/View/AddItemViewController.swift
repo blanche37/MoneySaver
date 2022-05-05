@@ -10,6 +10,8 @@ import UIKit
 class AddItemViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var moneyTextField: UITextField!
+    @IBOutlet weak var currencySegmentedControl: UISegmentedControl!
+    @IBOutlet weak var periodSegmentedControl: UISegmentedControl!
     
     
     @IBAction func dismiss(_ sender: UIBarButtonItem) {
