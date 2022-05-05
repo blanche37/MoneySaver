@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class AddItemViewController: UIViewController {
+final class AddItemViewController: UIViewController {
     var viewModel: ViewModel!
     weak var refreshDelegate: RefreshDelegate!
     
