@@ -12,11 +12,6 @@ class ConsumptionCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     func bind(title: String, period: String, money: Int) {
         itemLabel.text = title
         priceLabel.text = "\(money)"
