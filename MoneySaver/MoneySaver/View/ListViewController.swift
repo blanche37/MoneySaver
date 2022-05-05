@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import CoreData
 
 protocol RefreshDelegate: AnyObject {
     func refresh()
 }
 
-final class ListViewController: UIViewController {    
+final class ListViewController: UIViewController {
     var viewModel: ViewModel!
     @IBOutlet weak var tableView: UITableView!
     
