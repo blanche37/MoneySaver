@@ -12,10 +12,8 @@ protocol RefreshDelegate: AnyObject {
     func refresh()
 }
 
-final class ListViewController: UIViewController {
-    lazy var viewModel: ViewModel = MoneySaverViewModel(service: service)
-    lazy var service: Service = MoneySaverService(repository: repository)
-    var repository: Repository = SQLiteRepository()
+final class ListViewController: UIViewController {    
+    var viewModel: ViewModel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
