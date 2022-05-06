@@ -13,8 +13,7 @@ protocol ViewModel {
     var consumptions: Observable<[NSManagedObject]> { get }
     
     func create(item: NSManagedObject)
-    func fetchChallenges()
-    func fetchConsumptions()
+    func fetch()
 }
 
 final class MoneySaverViewModel: ViewModel {
@@ -31,23 +30,13 @@ final class MoneySaverViewModel: ViewModel {
         }
     }
     
-    func fetchChallenges() {
-        service.fetchChallenges { [weak self] challenges in
+    func fetch() {
+        service.fetch { [weak self] challenges in
             guard let self = self else {
                 return
             }
             
             self.challenges.value = challenges
-        }
-    }
-    
-    func fetchConsumptions() {
-        service.fetchConsumptions { [weak self] consumptions in
-            guard let self = self else {
-                return
-            }
-            
-            self.consumptions.value = consumptions
         }
     }
     

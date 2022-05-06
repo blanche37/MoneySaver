@@ -11,7 +11,6 @@ import CoreData
 protocol Repository {
     func save()
     func fetch(completion: @escaping ([Challenge]) -> ())
-    func fetch(completion: @escaping ([Consumption]) -> ())
     func removeChallenge()
     func removeConsumption()
     func updateChallenge()
@@ -34,19 +33,6 @@ final class SQLiteRepository: Repository {
         do {
             let challenge = try context.fetch(fetchChallenge)
             completion(challenge)
-        } catch {
-            print(error)
-        }
-    }
-    
-    func fetch(completion: @escaping ([Consumption]) -> ()) {
-        let context = CoreDataStack.shared.viewContext
-
-        let fetchConsumption: NSFetchRequest<Consumption> = Consumption.fetchRequest()
-
-        do {
-            let consumption = try context.fetch(fetchConsumption)
-            completion(consumption)
         } catch {
             print(error)
         }
