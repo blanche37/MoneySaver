@@ -28,6 +28,7 @@ final class MoneySaverViewModel: ViewModel {
         } else {
             consumptions.value.append(item)
         }
+        service.save()
     }
     
     func fetch() {
