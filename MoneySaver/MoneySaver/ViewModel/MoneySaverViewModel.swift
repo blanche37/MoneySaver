@@ -12,7 +12,7 @@ protocol ViewModel {
     var challenges: Observable<[NSManagedObject]> { get }
     var consumptions: Observable<[NSManagedObject]> { get }
     
-    func add(item: NSManagedObject)
+    func create(item: NSManagedObject)
     func fetchChallenges()
     func fetchConsumptions()
 }
@@ -23,7 +23,7 @@ final class MoneySaverViewModel: ViewModel {
     var challenges = Observable<[NSManagedObject]>([])
     var consumptions = Observable<[NSManagedObject]>([])
     
-    func add(item: NSManagedObject) {
+    func create(item: NSManagedObject) {
         if item is Challenge {
             challenges.value.append(item)
         } else {
