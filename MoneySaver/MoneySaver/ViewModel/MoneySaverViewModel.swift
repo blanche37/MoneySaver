@@ -9,8 +9,8 @@ import Foundation
 import CoreData
 
 protocol ViewModel {
-    var challenges: Observable<[NSManagedObject]> { get }
-    var consumptions: Observable<[NSManagedObject]> { get }
+    var challenges: Observable<[Challenge]> { get }
+    var consumptions: Observable<[Consumption]> { get }
     
     func create(item: NSManagedObject)
     func fetch()
@@ -19,14 +19,14 @@ protocol ViewModel {
 final class MoneySaverViewModel: ViewModel {
     var service: Service!
     
-    var challenges = Observable<[NSManagedObject]>([])
-    var consumptions = Observable<[NSManagedObject]>([])
+    var challenges = Observable<[Challenge]>([])
+    var consumptions = Observable<[Consumption]>([])
     
     func create(item: NSManagedObject) {
-        if item is Challenge {
-            challenges.value.append(item)
-        } else {
-            consumptions.value.append(item)
+        if let challenge = item as? Challenge {
+            challenges.value.append(challenge)
+        } else if let consumption = item as? Consumption {
+            consumptions.value.append(consumption)
         }
         service.save()
     }

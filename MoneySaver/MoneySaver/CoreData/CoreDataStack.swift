@@ -15,6 +15,8 @@ final class CoreDataStack {
         let container = NSPersistentContainer(name: "MoneySaver")
         let description = NSPersistentStoreDescription()
         description.type = NSSQLiteStoreType
+        description.shouldInferMappingModelAutomatically = true
+        description.shouldMigrateStoreAutomatically = true
         container.persistentStoreDescriptions = [description]
         
         container.loadPersistentStores { _, error in

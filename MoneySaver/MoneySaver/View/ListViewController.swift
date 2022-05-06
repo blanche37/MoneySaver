@@ -18,7 +18,6 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetch()
-        print(viewModel.challenges.value)
         tableView.reloadData()
     }
     
