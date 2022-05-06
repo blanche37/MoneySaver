@@ -54,6 +54,7 @@ final class AddItemViewController: UIViewController {
                 challenge.setValue(title, forKey: "title")
                 challenge.setValue(expire, forKey: "period")
                 challenge.setValue(money, forKey: "money")
+                challenge.setValue(UUID(), forKey: "id")
                 
                 self.viewModel.challenges.value.append(challenge)
                 do {
