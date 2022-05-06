@@ -11,7 +11,7 @@ import CoreData
 protocol Repository {
     func save()
     func fetch(completion: @escaping ([Challenge]) -> ())
-    func remove()
+    func remove(challenge: Challenge)
     func update()
     func removeAll()
 }
@@ -47,8 +47,17 @@ final class SQLiteRepository: Repository {
         }
     }
     
-    func remove() {
+    func remove(challenge: Challenge) {
+        let context = CoreDataStack.shared.viewContext
+        let fetchRequest: NSFetchRequest<Challenge> = Challenge.fetchRequest()
         
+        guard let id = challenge.id else {
+            return
+        }
+        
+        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+            context.delete(challenge)
+        save()
     }
     
     func update() {
