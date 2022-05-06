@@ -14,6 +14,8 @@ protocol Repository {
     func fetch(completion: @escaping ([Consumption]) -> ())
     func removeChallenge()
     func removeConsumption()
+    func updateChallenge()
+    func updateConsumption()
     func removeAll()
 }
 
@@ -66,6 +68,14 @@ final class SQLiteRepository: Repository {
     }
     
     func removeConsumption() {
+        
+    }
+    
+    func updateChallenge() {
+        
+    }
+    
+    func updateConsumption() {
         
     }
 }
