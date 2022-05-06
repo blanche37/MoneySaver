@@ -11,10 +11,8 @@ import CoreData
 protocol Repository {
     func save()
     func fetch(completion: @escaping ([Challenge]) -> ())
-    func removeChallenge()
-    func removeConsumption()
-    func updateChallenge()
-    func updateConsumption()
+    func remove()
+    func update()
     func removeAll()
 }
 
@@ -49,19 +47,12 @@ final class SQLiteRepository: Repository {
         }
     }
     
-    func removeChallenge() {
+    func remove() {
         
     }
     
-    func removeConsumption() {
+    func update() {
         
     }
-    
-    func updateChallenge() {
-        
-    }
-    
-    func updateConsumption() {
-        
-    }
+
 }
