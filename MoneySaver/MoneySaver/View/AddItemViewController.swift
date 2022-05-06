@@ -43,22 +43,15 @@ final class AddItemViewController: UIViewController {
                   let money = self.moneyTextField.text.flatMap({Int($0)}) else {
                 return
             }
-    
-            let context = CoreDataStack.shared.viewContext
-            
-            let entity = NSEntityDescription.entity(forEntityName: "Challenge", in: context)
-            
-            if let entity = entity {
-                let challenge = NSManagedObject(entity: entity, insertInto: context)
-                let expire: Date = self.expiration(expiration: expiration)
-                challenge.setValue(title, forKey: "title")
-                challenge.setValue(expire, forKey: "period")
-                challenge.setValue(money, forKey: "money")
-                challenge.setValue(UUID(), forKey: "id")
-                
-                self.viewModel.create(item: challenge)
-                self.refreshDelegate.refresh()
-            }
+
+            let expire: Date = self.expiration(expiration: expiration)
+            let challenge = Challenge(context: CoreDataStack.shared.viewContext)
+            challenge.setValue(title, forKey: "title")
+            challenge.setValue(expire, forKey: "period")
+            challenge.setValue(money, forKey: "money")
+            challenge.setValue(UUID(), forKey: "id")
+            self.viewModel.create(item: challenge)
+            self.refreshDelegate.refresh()
         }
     }
     
