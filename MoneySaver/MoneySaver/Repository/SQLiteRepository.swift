@@ -52,13 +52,10 @@ final class SQLiteRepository: Repository {
     
     func removeAll() {
         let context = CoreDataStack.shared.viewContext
-        
-        let fetchChallenge = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
-        let fetchConsumption = NSBatchDeleteRequest(fetchRequest: Consumption.fetchRequest())
+        let fetchRequest = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
         
         do {
-            try context.execute(fetchChallenge)
-            try context.execute(fetchConsumption)
+            try context.execute(fetchRequest)
         } catch {
             print(error)
         }
