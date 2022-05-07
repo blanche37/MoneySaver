@@ -19,10 +19,12 @@ protocol ViewModel {
 }
 
 final class MoneySaverViewModel: ViewModel {
+    // MARK: - Properties
     var service: Service!
     var challenges = Observable<[Challenge]>([])
     var consumptions = Observable<[Consumption]>([])
     
+    // MARK: - Methods
     func create(item: NSManagedObject) {
         if let challenge = item as? Challenge {
             challenges.value.append(challenge)
@@ -61,6 +63,7 @@ final class MoneySaverViewModel: ViewModel {
         }
     }
     
+    // MARK: - Initializer
     init(service: Service) {
         self.service = service
     }

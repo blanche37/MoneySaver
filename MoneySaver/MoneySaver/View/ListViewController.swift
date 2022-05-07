@@ -12,15 +12,20 @@ protocol RefreshDelegate: AnyObject {
 }
 
 final class ListViewController: UIViewController {
+    // MARK: - Properties
     var viewModel: ViewModel!
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - ViewLifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.readChallenges()
         tableView.reloadData()
     }
     
+    // MARK: - IBActions
     @IBAction func presentAddItemViewController(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "AddItem", bundle: nil)
         
@@ -35,6 +40,7 @@ final class ListViewController: UIViewController {
     }
 }
 
+// MARK: - TableViewDelegate, TableViewDataSource
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.challenges.value.count
@@ -84,6 +90,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - TableViewRefresh
 extension ListViewController: RefreshDelegate {
     func refresh() {
         tableView.reloadData()

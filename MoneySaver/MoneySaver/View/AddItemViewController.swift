@@ -9,19 +9,23 @@ import UIKit
 import CoreData
 
 final class AddItemViewController: UIViewController {
+    // MARK: - Properties
     var viewModel: ViewModel!
     weak var refreshDelegate: RefreshDelegate!
     
+    // MARK: - IBOutlets
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var currencySegmentedControl: UISegmentedControl!
     @IBOutlet weak var periodSegmentedControl: UISegmentedControl!
     
+    // MARK: - LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         drawUnderline(textFields: [titleTextField, moneyTextField])
     }
     
+    // MARK: - IBActions
     @IBAction func dismiss(_ sender: UIBarButtonItem) {
         presentingViewController?.dismiss(animated: true)
     }
@@ -47,6 +51,7 @@ final class AddItemViewController: UIViewController {
         }
     }
     
+    // MARK: - Methods
     private func expiration(expiration: String) -> Date {
         switch expiration {
         case "1Day":

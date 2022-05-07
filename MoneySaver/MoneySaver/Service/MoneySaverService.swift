@@ -17,8 +17,10 @@ protocol Service {
 }
 
 final class MoneySaverService: Service {
+    // MARK: - Properties
     var repository: Repository!
     
+    // MARK: - Methods
     func save() {
         repository.save()
     }
@@ -42,6 +44,7 @@ final class MoneySaverService: Service {
         completion()
     }
 
+    // MARK: - Initializer
     init(repository: Repository) {
         self.repository = repository
     }
