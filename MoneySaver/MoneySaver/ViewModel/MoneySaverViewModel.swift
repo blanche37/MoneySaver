@@ -14,6 +14,7 @@ protocol ViewModel {
     
     func create(item: NSManagedObject)
     func fetch()
+    func update(challenge: Challenge, title: String, money: Int)
     func delete(challenge: Challenge)
 }
 
@@ -40,6 +41,10 @@ final class MoneySaverViewModel: ViewModel {
             
             self.challenges.value = challenges
         }
+    }
+    
+    func update(challenge: Challenge, title: String, money: Int) {
+        service.update(challenge: challenge, title: title, money: money)
     }
     
     func delete(challenge: Challenge) {

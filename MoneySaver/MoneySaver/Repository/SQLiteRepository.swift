@@ -12,7 +12,7 @@ protocol Repository {
     func save()
     func fetch(completion: @escaping ([Challenge]) -> ())
     func remove(challenge: Challenge)
-    func update()
+    func update(challenge: Challenge, title: String, money: Int)
     func removeAll()
 }
 
@@ -55,14 +55,16 @@ final class SQLiteRepository: Repository {
             return
         }
         
-//        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
         fetchRequest.predicate = NSPredicate(format: "identifier == %@", id as CVarArg)
         context.delete(challenge)
         save()
     }
     
-    func update() {
+    func update(challenge: Challenge, title: String, money: Int) {
+        challenge.title = title
+        challenge.money = Int64(money)
         
+        save()
     }
 
 }
