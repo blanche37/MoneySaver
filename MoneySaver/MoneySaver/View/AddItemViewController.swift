@@ -17,21 +17,13 @@ final class AddItemViewController: UIViewController {
     @IBOutlet weak var currencySegmentedControl: UISegmentedControl!
     @IBOutlet weak var periodSegmentedControl: UISegmentedControl!
     
-    @IBAction func dismiss(_ sender: UIBarButtonItem) {
-        presentingViewController?.dismiss(animated: true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        drawUnderline(textFields: [titleTextField, moneyTextField])
     }
     
-    private func expiration(expiration: String) -> Date {
-        switch expiration {
-        case "1Day":
-            return Calendar.current.date(byAdding: .day, value: 1, to: Date())!
-        case "7Days":
-            return Calendar.current.date(byAdding: .day, value: 7, to: Date())!
-        case "30Days":
-            return Calendar.current.date(byAdding: .day, value: 30, to: Date())!
-        default:
-            fatalError()
-        }
+    @IBAction func dismiss(_ sender: UIBarButtonItem) {
+        presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func addItem(_ sender: UIButton) {
@@ -55,9 +47,17 @@ final class AddItemViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        drawUnderline(textFields: [titleTextField, moneyTextField])
+    private func expiration(expiration: String) -> Date {
+        switch expiration {
+        case "1Day":
+            return Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+        case "7Days":
+            return Calendar.current.date(byAdding: .day, value: 7, to: Date())!
+        case "30Days":
+            return Calendar.current.date(byAdding: .day, value: 30, to: Date())!
+        default:
+            fatalError()
+        }
     }
     
     private func drawUnderline(textFields: [UITextField]) {

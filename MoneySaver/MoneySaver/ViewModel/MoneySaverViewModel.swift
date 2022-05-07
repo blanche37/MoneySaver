@@ -13,14 +13,13 @@ protocol ViewModel {
     var consumptions: Observable<[Consumption]> { get }
     
     func create(item: NSManagedObject)
-    func fetch()
+    func readChallenges()
     func update(challenge: Challenge, title: String, money: Int)
     func delete(challenge: Challenge)
 }
 
 final class MoneySaverViewModel: ViewModel {
     var service: Service!
-    
     var challenges = Observable<[Challenge]>([])
     var consumptions = Observable<[Consumption]>([])
     
@@ -33,8 +32,8 @@ final class MoneySaverViewModel: ViewModel {
         service.save()
     }
     
-    func fetch() {
-        service.fetch { [weak self] challenges in
+    func readChallenges() {
+        service.read { [weak self] challenges in
             guard let self = self else {
                 return
             }

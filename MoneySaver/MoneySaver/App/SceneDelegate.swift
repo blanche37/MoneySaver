@@ -14,8 +14,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        
         let main = UIStoryboard(name: "Main", bundle: nil)
+        
         guard let vc = main.instantiateViewController(withIdentifier: "root") as? UINavigationController,
               let list = vc.viewControllers.first as? ListViewController else {
                 return

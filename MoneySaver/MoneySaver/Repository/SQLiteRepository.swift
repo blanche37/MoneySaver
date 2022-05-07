@@ -10,9 +10,9 @@ import CoreData
 
 protocol Repository {
     func save()
-    func fetch(completion: @escaping ([Challenge]) -> ())
-    func remove(challenge: Challenge)
+    func read(completion: @escaping ([Challenge]) -> ())
     func update(challenge: Challenge, title: String, money: Int)
+    func delete(challenge: Challenge)
     func removeAll()
 }
 
@@ -23,7 +23,7 @@ final class SQLiteRepository: Repository {
         context.saveContext()
     }
     
-    func fetch(completion: @escaping ([Challenge]) -> ()) {
+    func read(completion: @escaping ([Challenge]) -> ()) {
         let context = CoreDataStack.shared.viewContext
 
         let fetchChallenge: NSFetchRequest<Challenge> = Challenge.fetchRequest()
@@ -36,18 +36,14 @@ final class SQLiteRepository: Repository {
         }
     }
     
-    func removeAll() {
-        let context = CoreDataStack.shared.viewContext
-        let fetchRequest = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
+    func update(challenge: Challenge, title: String, money: Int) {
+        challenge.title = title
+        challenge.money = Int64(money)
         
-        do {
-            try context.execute(fetchRequest)
-        } catch {
-            print(error)
-        }
+        save()
     }
     
-    func remove(challenge: Challenge) {
+    func delete(challenge: Challenge) {
         let context = CoreDataStack.shared.viewContext
         let fetchRequest: NSFetchRequest<Challenge> = Challenge.fetchRequest()
         
@@ -60,11 +56,14 @@ final class SQLiteRepository: Repository {
         save()
     }
     
-    func update(challenge: Challenge, title: String, money: Int) {
-        challenge.title = title
-        challenge.money = Int64(money)
+    func removeAll() {
+        let context = CoreDataStack.shared.viewContext
+        let fetchRequest = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
         
-        save()
+        do {
+            try context.execute(fetchRequest)
+        } catch {
+            print(error)
+        }
     }
-
 }

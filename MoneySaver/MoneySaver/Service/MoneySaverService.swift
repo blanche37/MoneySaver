@@ -10,10 +10,10 @@ import CoreData
 
 protocol Service {
     func save()
-    func fetch(completion: @escaping ([Challenge]) -> ())
+    func read(completion: @escaping ([Challenge]) -> ())
     func update(challenge: Challenge, title: String, money: Int)
-    func removeAll(completion: @escaping () -> ())
     func delete(challenge: Challenge)
+    func removeAll(completion: @escaping () -> ())
 }
 
 final class MoneySaverService: Service {
@@ -23,8 +23,8 @@ final class MoneySaverService: Service {
         repository.save()
     }
     
-    func fetch(completion: @escaping ([Challenge]) -> ()) {
-        repository.fetch { challenges in
+    func read(completion: @escaping ([Challenge]) -> ()) {
+        repository.read { challenges in
             completion(challenges)
         }
     }
@@ -34,7 +34,7 @@ final class MoneySaverService: Service {
     }
     
     func delete(challenge: Challenge) {
-        repository.remove(challenge: challenge)
+        repository.delete(challenge: challenge)
     }
     
     func removeAll(completion: @escaping () -> ()) {

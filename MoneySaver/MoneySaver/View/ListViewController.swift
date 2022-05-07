@@ -17,7 +17,7 @@ final class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetch()
+        viewModel.readChallenges()
         tableView.reloadData()
     }
     
@@ -56,12 +56,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "~MM월dd일HH시"
         let convert = dateFormatter.string(from: period)
-        
         cell.bind(title: title, period: convert, money: money)
         
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
     }
@@ -75,15 +74,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                viewModel.delete(challenge: viewModel.challenges.value[indexPath.row])
-                viewModel.challenges.value.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                
-            } else if editingStyle == .insert {
-                
-            }
+        if editingStyle == .delete {
+            viewModel.delete(challenge: viewModel.challenges.value[indexPath.row])
+            viewModel.challenges.value.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            
         }
+    }
 }
 
 extension ListViewController: RefreshDelegate {
