@@ -104,4 +104,14 @@ final class AddItemViewController: UIViewController {
 }
 
 extension AddItemViewController: UITextFieldDelegate {
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//            guard let text = textField.text else {return false}
+//            
+//            // 최대 글자수 이상을 입력한 이후에는 중간에 다른 글자를 추가할 수 없게끔 작동
+//            if text.count >= maxLength && range.length == 0 && range.location < maxLength {
+//                return false
+//            }
+//            
+//            return true
+//        }
 }

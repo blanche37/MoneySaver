@@ -49,36 +49,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9yH-u2-nMc">
-                                                    <rect key="frame" x="20" y="5.5" width="183" height="94"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="100" text="Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-D5-jcm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="183" height="47"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                                            <color key="textColor" name="MyBlue"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-X2-001">
-                                                            <rect key="frame" x="0.0" y="47" width="96" height="47"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="~05/10/00시" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-jf-afn">
-                                                    <rect key="frame" x="284" y="69" width="93.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-D5-jcm">
+                                                    <rect key="frame" x="20" y="8" width="183" height="47"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                                    <color key="textColor" name="MyBlue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$10000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-X2-001">
+                                                    <rect key="frame" x="20" y="64.5" width="96" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="900" text="~05/10/00시" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-jf-afn">
+                                                    <rect key="frame" x="284" y="72.5" width="93.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UcE-X2-001" firstAttribute="bottom" secondItem="gOv-jf-afn" secondAttribute="bottom" constant="10" id="TRH-m0-U6I"/>
-                                                <constraint firstItem="9yH-u2-nMc" firstAttribute="centerY" secondItem="giG-5d-eag" secondAttribute="centerY" id="hZI-XF-q5o"/>
-                                                <constraint firstItem="9yH-u2-nMc" firstAttribute="leading" secondItem="giG-5d-eag" secondAttribute="leadingMargin" id="tD4-7t-7MO"/>
+                                                <constraint firstItem="NqZ-D5-jcm" firstAttribute="top" secondItem="giG-5d-eag" secondAttribute="top" constant="8" id="IzF-X8-ewt"/>
+                                                <constraint firstItem="UcE-X2-001" firstAttribute="leading" secondItem="NqZ-D5-jcm" secondAttribute="leading" id="UFX-fl-pvB"/>
+                                                <constraint firstItem="UcE-X2-001" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gOv-jf-afn" secondAttribute="leading" id="c0t-lv-IcU"/>
+                                                <constraint firstItem="NqZ-D5-jcm" firstAttribute="leading" secondItem="giG-5d-eag" secondAttribute="leading" constant="20" id="ig6-MD-xEq"/>
+                                                <constraint firstAttribute="bottom" secondItem="gOv-jf-afn" secondAttribute="bottom" constant="12" id="uDV-0c-XPz"/>
+                                                <constraint firstAttribute="bottom" secondItem="UcE-X2-001" secondAttribute="bottom" constant="8" id="wQs-S0-u5D"/>
                                                 <constraint firstItem="gOv-jf-afn" firstAttribute="trailing" secondItem="giG-5d-eag" secondAttribute="trailingMargin" id="xbE-RF-9jK"/>
-                                                <constraint firstItem="9yH-u2-nMc" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gOv-jf-afn" secondAttribute="leading" id="zEd-47-hpK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MyLightBlue"/>
