@@ -55,8 +55,9 @@ final class SQLiteRepository: Repository {
             return
         }
         
-        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
-            context.delete(challenge)
+//        fetchRequest.predicate = NSPredicate(format: "id == \(id)")
+        fetchRequest.predicate = NSPredicate(format: "identifier == %@", id as CVarArg)
+        context.delete(challenge)
         save()
     }
     

@@ -74,7 +74,16 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.isSelected = false
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                viewModel.delete(challenge: viewModel.challenges.value[indexPath.row])
+                viewModel.challenges.value.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+            } else if editingStyle == .insert {
+                
+            }
+        }
 }
 
 extension ListViewController: RefreshDelegate {
