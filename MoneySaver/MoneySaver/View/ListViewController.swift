@@ -73,6 +73,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.isSelected = false
     }
+    
+    
 }
 
 extension ListViewController: RefreshDelegate {

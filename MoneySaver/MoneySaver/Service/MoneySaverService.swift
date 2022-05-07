@@ -12,6 +12,7 @@ protocol Service {
     func save()
     func fetch(completion: @escaping ([Challenge]) -> ())
     func removeAll(completion: @escaping () -> ())
+    func delete(challenge: Challenge)
 }
 
 final class MoneySaverService: Service {
@@ -25,6 +26,10 @@ final class MoneySaverService: Service {
         repository.fetch { challenges in
             completion(challenges)
         }
+    }
+    
+    func delete(challenge: Challenge) {
+        repository.remove(challenge: challenge)
     }
     
     func removeAll(completion: @escaping () -> ()) {

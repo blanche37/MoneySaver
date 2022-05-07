@@ -15,6 +15,10 @@
 		436FCF19281FF69800AF09BC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF18281FF69800AF09BC /* Observable.swift */; };
 		436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */; };
 		4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385689E28223FCB0086A4AE /* ConsumptionCell.swift */; };
+		43A7A1A82825EE58001E90C0 /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A42825EE58001E90C0 /* Challenge+CoreDataClass.swift */; };
+		43A7A1A92825EE58001E90C0 /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A52825EE58001E90C0 /* Challenge+CoreDataProperties.swift */; };
+		43A7A1AA2825EE58001E90C0 /* Consumption+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A62825EE58001E90C0 /* Consumption+CoreDataClass.swift */; };
+		43A7A1AB2825EE58001E90C0 /* Consumption+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A72825EE58001E90C0 /* Consumption+CoreDataProperties.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
@@ -54,6 +58,10 @@
 		436FCF18281FF69800AF09BC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverViewModel.swift; sourceTree = "<group>"; };
 		4385689E28223FCB0086A4AE /* ConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCell.swift; sourceTree = "<group>"; };
+		43A7A1A42825EE58001E90C0 /* Challenge+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataClass.swift"; sourceTree = "<group>"; };
+		43A7A1A52825EE58001E90C0 /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		43A7A1A62825EE58001E90C0 /* Consumption+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataClass.swift"; sourceTree = "<group>"; };
+		43A7A1A72825EE58001E90C0 /* Consumption+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 		43D9BAFF281FDA3E00FA1476 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				43A7A1A42825EE58001E90C0 /* Challenge+CoreDataClass.swift */,
+				43A7A1A52825EE58001E90C0 /* Challenge+CoreDataProperties.swift */,
+				43A7A1A62825EE58001E90C0 /* Consumption+CoreDataClass.swift */,
+				43A7A1A72825EE58001E90C0 /* Consumption+CoreDataProperties.swift */,
 				436FCF0C281FE01000AF09BC /* CoreDataStack.swift */,
 				43D9BAD0281FD46200FA1476 /* MoneySaver.xcdatamodeld */,
 			);
@@ -345,14 +357,18 @@
 				436FCF19281FF69800AF09BC /* Observable.swift in Sources */,
 				4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */,
 				436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */,
+				43A7A1A92825EE58001E90C0 /* Challenge+CoreDataProperties.swift in Sources */,
+				43A7A1A82825EE58001E90C0 /* Challenge+CoreDataClass.swift in Sources */,
 				43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */,
 				43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */,
 				436FCF0D281FE01000AF09BC /* CoreDataStack.swift in Sources */,
 				436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */,
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
+				43A7A1AB2825EE58001E90C0 /* Consumption+CoreDataProperties.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
 				432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */,
+				43A7A1AA2825EE58001E90C0 /* Consumption+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
