@@ -121,7 +121,7 @@ final class AddItemViewController: UIViewController {
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
     
-    @objc func checkTextField() {
+    @objc private func checkTextField() {
         if let _ = moneyTextField.text.flatMap({Int($0)}),
            titleTextField.hasText {
             doneButton.isEnabled = true
