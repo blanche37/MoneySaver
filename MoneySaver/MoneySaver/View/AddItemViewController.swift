@@ -56,6 +56,7 @@ final class AddItemViewController: UIViewController {
             challenge.setValue(expire, forKey: "period")
             challenge.setValue(money, forKey: "money")
             challenge.setValue(UUID(), forKey: "id")
+            challenge.setValue(currency, forKey: "currency")
             self.viewModel.create(item: challenge)
             self.refreshDelegate.refresh()
         }

@@ -11,7 +11,7 @@ import CoreData
 protocol Service {
     func save()
     func read(completion: @escaping ([Challenge]) -> ())
-    func update(challenge: Challenge, title: String, money: Int)
+    func update(challenge: Challenge, title: String, money: Double)
     func delete(challenge: Challenge)
     func removeAll(completion: @escaping () -> ())
 }
@@ -31,7 +31,7 @@ final class MoneySaverService: Service {
         }
     }
     
-    func update(challenge: Challenge, title: String, money: Int) {
+    func update(challenge: Challenge, title: String, money: Double) {
         repository.update(challenge: challenge, title: title, money: money)
     }
     

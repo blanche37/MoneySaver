@@ -2,7 +2,7 @@
 //  Challenge+CoreDataProperties.swift
 //  MoneySaver
 //
-//  Created by yun on 2022/05/07.
+//  Created by yun on 2022/05/08.
 //
 //
 
@@ -17,9 +17,10 @@ extension Challenge {
     }
 
     @NSManaged public var id: UUID?
-    @NSManaged public var money: Int64
+    @NSManaged public var money: Double
     @NSManaged public var period: Date?
     @NSManaged public var title: String?
+    @NSManaged public var currency: String?
     @NSManaged public var consumptions: NSSet?
 
 }

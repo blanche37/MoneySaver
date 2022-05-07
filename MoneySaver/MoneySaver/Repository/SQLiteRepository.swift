@@ -11,7 +11,7 @@ import CoreData
 protocol Repository {
     func save()
     func read(completion: @escaping ([Challenge]) -> ())
-    func update(challenge: Challenge, title: String, money: Int)
+    func update(challenge: Challenge, title: String, money: Double)
     func delete(challenge: Challenge)
     func removeAll()
 }
@@ -36,9 +36,9 @@ final class SQLiteRepository: Repository {
         }
     }
     
-    func update(challenge: Challenge, title: String, money: Int) {
+    func update(challenge: Challenge, title: String, money: Double) {
         challenge.title = title
-        challenge.money = Int64(money)
+        challenge.money = money
         
         save()
     }

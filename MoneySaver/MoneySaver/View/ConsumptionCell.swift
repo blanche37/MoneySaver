@@ -11,10 +11,13 @@ class ConsumptionCell: UITableViewCell {
     @IBOutlet private weak var itemLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
-    
-    func bind(title: String, period: String, money: Int) {
+}
+
+extension ConsumptionCell: NumberFormattable {
+    func bind(title: String, period: String, money: Double, currency: String) {
+        let changedNumber = changeNumberFormat(currency: currency, number: money)
         itemLabel.text = title
-        priceLabel.text = "\(money)"
+        priceLabel.text = changedNumber
         dateLabel.text = period
     }
 }

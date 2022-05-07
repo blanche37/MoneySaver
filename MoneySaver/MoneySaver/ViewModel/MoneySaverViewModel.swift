@@ -14,7 +14,7 @@ protocol ViewModel {
     
     func create(item: NSManagedObject)
     func readChallenges()
-    func update(challenge: Challenge, title: String, money: Int)
+    func update(challenge: Challenge, title: String, money: Double)
     func delete(challenge: Challenge)
 }
 
@@ -44,7 +44,7 @@ final class MoneySaverViewModel: ViewModel {
         }
     }
     
-    func update(challenge: Challenge, title: String, money: Int) {
+    func update(challenge: Challenge, title: String, money: Double) {
         service.update(challenge: challenge, title: title, money: money)
     }
     

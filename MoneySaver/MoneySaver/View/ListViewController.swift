@@ -55,14 +55,15 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let title = challenge.value(forKey: "title") as? String,
               let period = challenge.value(forKey: "period") as? Date,
-              let money = challenge.value(forKey: "money") as? Int else {
+              let money = challenge.value(forKey: "money") as? Double,
+              let currency = challenge.value(forKey: "currency") as? String else {
             return UITableViewCell()
         }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "~MM월dd일HH시"
         let convert = dateFormatter.string(from: period)
-        cell.bind(title: title, period: convert, money: money)
+        cell.bind(title: title, period: convert, money: money, currency: currency)
         
         return cell
     }
