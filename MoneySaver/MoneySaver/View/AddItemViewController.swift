@@ -23,6 +23,7 @@ final class AddItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         drawUnderline(textFields: [titleTextField, moneyTextField])
+        changeSegmentedControlFontColor()
         titleTextField.becomeFirstResponder()
     }
     
@@ -75,6 +76,13 @@ final class AddItemViewController: UIViewController {
             border.borderWidth = width
             $0.layer.addSublayer(border)
             $0.layer.masksToBounds = true
+        }
+    }
+    
+    private func changeSegmentedControlFontColor() {
+        [currencySegmentedControl, periodSegmentedControl].forEach {
+            $0?.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+            
         }
     }
     
