@@ -23,6 +23,7 @@ final class AddItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         drawUnderline(textFields: [titleTextField, moneyTextField])
+        titleTextField.becomeFirstResponder()
     }
     
     // MARK: - IBActions
