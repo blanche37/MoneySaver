@@ -19,6 +19,7 @@
 		43A7A1A92825EE58001E90C0 /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A52825EE58001E90C0 /* Challenge+CoreDataProperties.swift */; };
 		43A7A1AA2825EE58001E90C0 /* Consumption+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A62825EE58001E90C0 /* Consumption+CoreDataClass.swift */; };
 		43A7A1AB2825EE58001E90C0 /* Consumption+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1A72825EE58001E90C0 /* Consumption+CoreDataProperties.swift */; };
+		43A7A1B62826EE7F001E90C0 /* NumberFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
@@ -62,6 +63,7 @@
 		43A7A1A52825EE58001E90C0 /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		43A7A1A62825EE58001E90C0 /* Consumption+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataClass.swift"; sourceTree = "<group>"; };
 		43A7A1A72825EE58001E90C0 /* Consumption+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormattable.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		43A7A1B42826EE5F001E90C0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		43D9BABB281FD46200FA1476 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				43D9BAFD281FD9FC00FA1476 /* App */,
+				43A7A1B42826EE5F001E90C0 /* Protocol */,
 				43D9BAFE281FDA0600FA1476 /* View */,
 				436FCF17281FF68700AF09BC /* ViewModel */,
 				436FCF14281FF26600AF09BC /* Service */,
@@ -366,6 +377,7 @@
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
 				43A7A1AB2825EE58001E90C0 /* Consumption+CoreDataProperties.swift in Sources */,
+				43A7A1B62826EE7F001E90C0 /* NumberFormattable.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
 				432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */,
 				43A7A1AA2825EE58001E90C0 /* Consumption+CoreDataClass.swift in Sources */,
