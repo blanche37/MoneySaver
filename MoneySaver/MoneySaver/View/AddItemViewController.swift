@@ -77,10 +77,11 @@ final class AddItemViewController: UIViewController {
             $0.layer.masksToBounds = true
         }
     }
-}
-
-extension AddItemViewController: UITextFieldDelegate {
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+}
+
+extension AddItemViewController: UITextFieldDelegate {
 }
