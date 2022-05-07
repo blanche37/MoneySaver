@@ -17,50 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Kjh-ew-LHt">
-                                <rect key="frame" x="40" y="128" width="334" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Kjh-ew-LHt">
+                                <rect key="frame" x="40" y="128" width="334" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faq-mv-2ZO">
-                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="MyWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제목을 입력하세요.(최대9자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCX-D4-kH4">
-                                        <rect key="frame" x="101.5" y="0.0" width="232.5" height="36"/>
+                                        <rect key="frame" x="86.5" y="0.0" width="247.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="MyWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="checkTitleTextField:" destination="KjU-hX-cGf" eventType="editingChanged" id="O7M-8m-Lt3"/>
                                             <outlet property="delegate" destination="KjU-hX-cGf" id="rQ1-0q-fRu"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="by2-cl-mbQ">
-                                <rect key="frame" x="40" y="204" width="334" height="36"/>
+                                <rect key="frame" x="40" y="198" width="334" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-oP-JLf">
-                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="MyWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액을 입력하세요.(최대9자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-lu-LoG">
-                                        <rect key="frame" x="100.5" y="0.0" width="233.5" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액을 숫자로 입력하세요.(최대9자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-lu-LoG">
+                                        <rect key="frame" x="85.5" y="0.0" width="248.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="MyWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="checkMoneyTextField:" destination="KjU-hX-cGf" eventType="editingChanged" id="wMW-gA-rY3"/>
                                             <outlet property="delegate" destination="KjU-hX-cGf" id="SeX-bb-LPv"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-hs-bca">
-                                <rect key="frame" x="163" y="442" width="88.5" height="47.5"/>
+                                <rect key="frame" x="163" y="430" width="88.5" height="47.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
@@ -71,7 +73,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-8N-xhY">
-                                <rect key="frame" x="40" y="290" width="334" height="32"/>
+                                <rect key="frame" x="40" y="278" width="334" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <segments>
                                     <segment title="$"/>
@@ -80,7 +82,7 @@
                                 <color key="selectedSegmentTintColor" systemColor="systemGray4Color"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="abc-OJ-oz7">
-                                <rect key="frame" x="40" y="371" width="334" height="32"/>
+                                <rect key="frame" x="40" y="359" width="334" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <segments>
                                     <segment title="1Day"/>
@@ -119,6 +121,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="currencySegmentedControl" destination="VGG-8N-xhY" id="f6b-2H-QbU"/>
+                        <outlet property="doneButton" destination="f4n-hs-bca" id="WDf-gO-bEQ"/>
                         <outlet property="moneyTextField" destination="jQD-lu-LoG" id="647-cs-BOc"/>
                         <outlet property="periodSegmentedControl" destination="abc-OJ-oz7" id="L96-WV-u7e"/>
                         <outlet property="titleTextField" destination="QCX-D4-kH4" id="yGs-sR-mcO"/>

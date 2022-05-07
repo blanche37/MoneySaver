@@ -8,6 +8,10 @@
 import UIKit
 import CoreData
 
+extension Notification.Name {
+    static let checkTextField = Notification.Name("checkTextField")
+}
+
 final class AddItemViewController: UIViewController {
     // MARK: - Properties
     var viewModel: ViewModel!
@@ -18,6 +22,7 @@ final class AddItemViewController: UIViewController {
     @IBOutlet private weak var moneyTextField: UITextField!
     @IBOutlet private weak var currencySegmentedControl: UISegmentedControl!
     @IBOutlet private weak var periodSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var doneButton: UIButton!
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -26,6 +31,8 @@ final class AddItemViewController: UIViewController {
         changeSegmentedControlFontColor()
         setPlaceholderColor(textFields: [titleTextField, moneyTextField], .lightGray)
         titleTextField.becomeFirstResponder()
+        doneButton.isEnabled = false
+        addObservers(notificationName: Notification.Name.checkTextField)
     }
     
     // MARK: - IBActions
@@ -52,6 +59,14 @@ final class AddItemViewController: UIViewController {
             self.viewModel.create(item: challenge)
             self.refreshDelegate.refresh()
         }
+    }
+    
+    @IBAction func checkTitleTextField(_ sender: UITextField) {
+        postNotification(notificationName: Notification.Name.checkTextField)
+    }
+    
+    @IBAction func checkMoneyTextField(_ sender: UITextField) {
+        postNotification(notificationName: Notification.Name.checkTextField)
     }
     
     // MARK: - Methods
@@ -98,6 +113,23 @@ final class AddItemViewController: UIViewController {
         }
     }
     
+    private func addObservers(notificationName: Notification.Name) {
+        NotificationCenter.default.addObserver(self, selector: #selector(checkTextField), name: notificationName, object: nil)
+    }
+    
+    private func postNotification(notificationName: Notification.Name) {
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+    
+    @objc func checkTextField() {
+        if let _ = moneyTextField.text.flatMap({Int($0)}),
+           titleTextField.hasText {
+            doneButton.isEnabled = true
+        } else {
+            doneButton.isEnabled = false
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -113,6 +145,4 @@ extension AddItemViewController: UITextFieldDelegate {
      
         return updatedText.count <= 9
     }
-    
-    
 }
