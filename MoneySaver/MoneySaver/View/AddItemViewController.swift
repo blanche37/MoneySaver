@@ -86,7 +86,7 @@ final class AddItemViewController: UIViewController {
         }
     }
     
-    func setPlaceholderColor(textFields: [UITextField], _ placeholderColor: UIColor) {
+    private func setPlaceholderColor(textFields: [UITextField], _ placeholderColor: UIColor) {
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(
                 string: $0.placeholder ?? "",
