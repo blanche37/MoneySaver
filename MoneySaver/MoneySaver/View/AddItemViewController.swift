@@ -24,6 +24,7 @@ final class AddItemViewController: UIViewController {
         super.viewDidLoad()
         drawUnderline(textFields: [titleTextField, moneyTextField])
         changeSegmentedControlFontColor()
+        setPlaceholderColor(textFields: [titleTextField, moneyTextField], .lightGray)
         titleTextField.becomeFirstResponder()
     }
     
@@ -82,7 +83,18 @@ final class AddItemViewController: UIViewController {
     private func changeSegmentedControlFontColor() {
         [currencySegmentedControl, periodSegmentedControl].forEach {
             $0?.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-            
+        }
+    }
+    
+    func setPlaceholderColor(textFields: [UITextField], _ placeholderColor: UIColor) {
+        textFields.forEach {
+            $0.attributedPlaceholder = NSAttributedString(
+                string: $0.placeholder ?? "",
+                attributes: [
+                    .foregroundColor: placeholderColor,
+                    .font: $0.font
+                ].compactMapValues { $0 }
+            )
         }
     }
     
