@@ -14,10 +14,10 @@ final class AddItemViewController: UIViewController {
     weak var refreshDelegate: RefreshDelegate!
     
     // MARK: - IBOutlets
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var moneyTextField: UITextField!
-    @IBOutlet weak var currencySegmentedControl: UISegmentedControl!
-    @IBOutlet weak var periodSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var moneyTextField: UITextField!
+    @IBOutlet private weak var currencySegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var periodSegmentedControl: UISegmentedControl!
     
     // MARK: - LifeCycles
     override func viewDidLoad() {

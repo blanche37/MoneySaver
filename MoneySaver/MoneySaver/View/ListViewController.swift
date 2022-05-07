@@ -16,7 +16,7 @@ final class ListViewController: UIViewController {
     var viewModel: ViewModel!
     
     // MARK: - IBOutlet
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - ViewLifeCycles
     override func viewDidLoad() {
