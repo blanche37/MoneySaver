@@ -13,7 +13,12 @@ final class CoreDataStack {
     
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "MoneySaver")
-        let description = NSPersistentStoreDescription()
+        let storeURL = try! FileManager
+                .default
+                .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                .appendingPathComponent("MoneySaver.sqlite")
+
+        let description = NSPersistentStoreDescription(url: storeURL)
         description.type = NSSQLiteStoreType
         container.persistentStoreDescriptions = [description]
         
@@ -21,13 +26,16 @@ final class CoreDataStack {
             if let error = error as NSError? {
                 fatalError("Unable to load core data persistent stores: \(error)")
             }
+            description.shouldInferMappingModelAutomatically = true
+            description.shouldMigrateStoreAutomatically = true
+            container.viewContext.mergePolicy =  NSMergeByPropertyObjectTrumpMergePolicy
         }
         return container
     }()
     
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
+    lazy var viewContext: NSManagedObjectContext = {
+        return self.persistentContainer.viewContext
+    }()
     
     func saveContext() {
         let context = self.viewContext
@@ -41,4 +49,18 @@ final class CoreDataStack {
             }
         }
     }
+    
+    func getCoreDataDBPath() {
+            let path = FileManager
+                .default
+                .urls(for: .applicationSupportDirectory, in: .userDomainMask)
+                .last?
+                .absoluteString
+                .replacingOccurrences(of: "file://", with: "")
+                .removingPercentEncoding
+
+            print("Core Data DB Path :: \(path ?? "Not found")")
+        }
+    
+    
 }

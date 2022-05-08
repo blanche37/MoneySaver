@@ -9,30 +9,33 @@ import Foundation
 import CoreData
 
 protocol ViewModel {
-    var challenges: Observable<[NSManagedObject]> { get }
-    var consumptions: Observable<[NSManagedObject]> { get }
+    var challenges: Observable<[Challenge]> { get }
+    var consumptions: Observable<[Consumption]> { get }
     
-    func add(item: NSManagedObject)
-    func fetchChallenges()
-    func fetchConsumptions()
+    func create(item: NSManagedObject)
+    func readChallenges()
+    func update(challenge: Challenge, title: String, money: Double)
+    func delete(challenge: Challenge)
 }
 
 final class MoneySaverViewModel: ViewModel {
+    // MARK: - Properties
     var service: Service!
+    var challenges = Observable<[Challenge]>([])
+    var consumptions = Observable<[Consumption]>([])
     
-    var challenges = Observable<[NSManagedObject]>([])
-    var consumptions = Observable<[NSManagedObject]>([])
-    
-    func add(item: NSManagedObject) {
-        if item is Challenge {
-            challenges.value.append(item)
-        } else {
-            consumptions.value.append(item)
+    // MARK: - Methods
+    func create(item: NSManagedObject) {
+        if let challenge = item as? Challenge {
+            challenges.value.append(challenge)
+        } else if let consumption = item as? Consumption {
+            consumptions.value.append(consumption)
         }
+        service.save()
     }
     
-    func fetchChallenges() {
-        service.fetchChallenges { [weak self] challenges in
+    func readChallenges() {
+        service.read { [weak self] challenges in
             guard let self = self else {
                 return
             }
@@ -41,14 +44,12 @@ final class MoneySaverViewModel: ViewModel {
         }
     }
     
-    func fetchConsumptions() {
-        service.fetchConsumptions { [weak self] consumptions in
-            guard let self = self else {
-                return
-            }
-            
-            self.consumptions.value = consumptions
-        }
+    func update(challenge: Challenge, title: String, money: Double) {
+        service.update(challenge: challenge, title: title, money: money)
+    }
+    
+    func delete(challenge: Challenge) {
+        service.delete(challenge: challenge)
     }
     
     func removeAll() {
@@ -62,6 +63,7 @@ final class MoneySaverViewModel: ViewModel {
         }
     }
     
+    // MARK: - Initializer
     init(service: Service) {
         self.service = service
     }

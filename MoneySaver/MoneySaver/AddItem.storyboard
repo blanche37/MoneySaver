@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Challenge-->
+        <scene sceneID="eJJ-2v-H3A">
+            <objects>
+                <viewController id="KjU-hX-cGf" customClass="AddItemViewController" customModule="MoneySaver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="scaleToFill" id="GnQ-IF-g2g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Kjh-ew-LHt">
+                                <rect key="frame" x="40" y="128" width="334" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faq-mv-2ZO">
+                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" name="MyWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제목을 입력하세요.(최대9자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCX-D4-kH4">
+                                        <rect key="frame" x="86.5" y="0.0" width="247.5" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="MyWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="checkTitleTextField:" destination="KjU-hX-cGf" eventType="editingChanged" id="O7M-8m-Lt3"/>
+                                            <outlet property="delegate" destination="KjU-hX-cGf" id="rQ1-0q-fRu"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="by2-cl-mbQ">
+                                <rect key="frame" x="40" y="198" width="334" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-oP-JLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" name="MyWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액을 숫자로 입력하세요.(최대9자)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQD-lu-LoG">
+                                        <rect key="frame" x="85.5" y="0.0" width="248.5" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="MyWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="checkMoneyTextField:" destination="KjU-hX-cGf" eventType="editingChanged" id="wMW-gA-rY3"/>
+                                            <outlet property="delegate" destination="KjU-hX-cGf" id="SeX-bb-LPv"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-hs-bca">
+                                <rect key="frame" x="163" y="430" width="88.5" height="47.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                    <color key="baseForegroundColor" name="MyWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addItem:" destination="KjU-hX-cGf" eventType="touchUpInside" id="VKB-m4-sN2"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-8N-xhY">
+                                <rect key="frame" x="40" y="278" width="334" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <segments>
+                                    <segment title="$"/>
+                                    <segment title="₩"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="abc-OJ-oz7">
+                                <rect key="frame" x="40" y="359" width="334" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <segments>
+                                    <segment title="1Day"/>
+                                    <segment title="7Days"/>
+                                    <segment title="30Days"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KX8-v2-GdK"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f4n-hs-bca" firstAttribute="centerX" secondItem="GnQ-IF-g2g" secondAttribute="centerX" id="5fe-fU-YZ5"/>
+                            <constraint firstItem="Kjh-ew-LHt" firstAttribute="top" secondItem="KX8-v2-GdK" secondAttribute="top" constant="40" id="6EF-8W-LR7"/>
+                            <constraint firstItem="abc-OJ-oz7" firstAttribute="top" secondItem="VGG-8N-xhY" secondAttribute="bottom" constant="50" id="6F4-ez-24x"/>
+                            <constraint firstItem="Kjh-ew-LHt" firstAttribute="leading" secondItem="KX8-v2-GdK" secondAttribute="leading" constant="40" id="GUj-eH-ggu"/>
+                            <constraint firstItem="f4n-hs-bca" firstAttribute="top" secondItem="abc-OJ-oz7" secondAttribute="bottom" constant="40" id="JTo-fj-Tk8"/>
+                            <constraint firstItem="VGG-8N-xhY" firstAttribute="leading" secondItem="KX8-v2-GdK" secondAttribute="leading" constant="40" id="MwQ-ut-noW"/>
+                            <constraint firstItem="by2-cl-mbQ" firstAttribute="top" secondItem="Kjh-ew-LHt" secondAttribute="bottom" constant="40" id="N2c-1p-ViH"/>
+                            <constraint firstItem="KX8-v2-GdK" firstAttribute="trailing" secondItem="by2-cl-mbQ" secondAttribute="trailing" constant="40" id="V0Y-7a-MZa"/>
+                            <constraint firstItem="KX8-v2-GdK" firstAttribute="trailing" secondItem="abc-OJ-oz7" secondAttribute="trailing" constant="40" id="cpS-If-cC6"/>
+                            <constraint firstItem="KX8-v2-GdK" firstAttribute="trailing" secondItem="Kjh-ew-LHt" secondAttribute="trailing" constant="40" id="f0K-lr-sYf"/>
+                            <constraint firstItem="abc-OJ-oz7" firstAttribute="leading" secondItem="KX8-v2-GdK" secondAttribute="leading" constant="40" id="ikr-k1-YMu"/>
+                            <constraint firstItem="VGG-8N-xhY" firstAttribute="top" secondItem="by2-cl-mbQ" secondAttribute="bottom" constant="50" id="l53-OJ-Zel"/>
+                            <constraint firstItem="KX8-v2-GdK" firstAttribute="trailing" secondItem="VGG-8N-xhY" secondAttribute="trailing" constant="40" id="nSJ-3o-0ng"/>
+                            <constraint firstItem="by2-cl-mbQ" firstAttribute="leading" secondItem="KX8-v2-GdK" secondAttribute="leading" constant="40" id="vF9-AR-RAW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Challenge" id="qnR-iq-dcY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="gB0-om-DjA">
+                            <color key="tintColor" name="MyGray"/>
+                            <connections>
+                                <action selector="dismiss:" destination="KjU-hX-cGf" id="uq2-jU-kWk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currencySegmentedControl" destination="VGG-8N-xhY" id="f6b-2H-QbU"/>
+                        <outlet property="doneButton" destination="f4n-hs-bca" id="WDf-gO-bEQ"/>
+                        <outlet property="moneyTextField" destination="jQD-lu-LoG" id="647-cs-BOc"/>
+                        <outlet property="periodSegmentedControl" destination="abc-OJ-oz7" id="L96-WV-u7e"/>
+                        <outlet property="titleTextField" destination="QCX-D4-kH4" id="yGs-sR-mcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJP-qZ-shW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="-218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7dt-oN-MFl">
+            <objects>
+                <navigationController storyboardIdentifier="a" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="overFullScreen" id="Kk2-d6-j8r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N86-KX-BMS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="MyWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KjU-hX-cGf" kind="relationship" relationship="rootViewController" id="Fgh-3S-wDB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qm-SD-WLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1406" y="-191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MyGray">
+            <color red="0.86299997568130493" green="0.90200001001358032" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MyWhite">
+            <color red="0.96100002527236938" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

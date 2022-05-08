@@ -10,8 +10,9 @@ import CoreData
 
 protocol Repository {
     func save()
-    func fetch(completion: @escaping ([Challenge]) -> ())
-    func fetch(completion: @escaping ([Consumption]) -> ())
+    func read(completion: @escaping ([Challenge]) -> ())
+    func update(challenge: Challenge, title: String, money: Double)
+    func delete(challenge: Challenge)
     func removeAll()
 }
 
@@ -22,7 +23,7 @@ final class SQLiteRepository: Repository {
         context.saveContext()
     }
     
-    func fetch(completion: @escaping ([Challenge]) -> ()) {
+    func read(completion: @escaping ([Challenge]) -> ()) {
         let context = CoreDataStack.shared.viewContext
 
         let fetchChallenge: NSFetchRequest<Challenge> = Challenge.fetchRequest()
@@ -35,28 +36,32 @@ final class SQLiteRepository: Repository {
         }
     }
     
-    func fetch(completion: @escaping ([Consumption]) -> ()) {
+    func update(challenge: Challenge, title: String, money: Double) {
+        challenge.title = title
+        challenge.money = money
+        
+        save()
+    }
+    
+    func delete(challenge: Challenge) {
         let context = CoreDataStack.shared.viewContext
-
-        let fetchConsumption: NSFetchRequest<Consumption> = Consumption.fetchRequest()
-
-        do {
-            let consumption = try context.fetch(fetchConsumption)
-            completion(consumption)
-        } catch {
-            print(error)
+        let fetchRequest: NSFetchRequest<Challenge> = Challenge.fetchRequest()
+        
+        guard let id = challenge.id else {
+            return
         }
+        
+        fetchRequest.predicate = NSPredicate(format: "identifier == %@", id as CVarArg)
+        context.delete(challenge)
+        save()
     }
     
     func removeAll() {
         let context = CoreDataStack.shared.viewContext
-        
-        let fetchChallenge = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
-        let fetchConsumption = NSBatchDeleteRequest(fetchRequest: Consumption.fetchRequest())
+        let fetchRequest = NSBatchDeleteRequest(fetchRequest: Challenge.fetchRequest())
         
         do {
-            try context.execute(fetchChallenge)
-            try context.execute(fetchConsumption)
+            try context.execute(fetchRequest)
         } catch {
             print(error)
         }
