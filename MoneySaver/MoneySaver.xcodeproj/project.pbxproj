@@ -20,6 +20,7 @@
 		43A7A1BC2826F342001E90C0 /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B82826F342001E90C0 /* Challenge+CoreDataProperties.swift */; };
 		43A7A1BD2826F342001E90C0 /* Consumption+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B92826F342001E90C0 /* Consumption+CoreDataClass.swift */; };
 		43A7A1BE2826F342001E90C0 /* Consumption+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1BA2826F342001E90C0 /* Consumption+CoreDataProperties.swift */; };
+		43A7A1C02826F465001E90C0 /* DateFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1BF2826F465001E90C0 /* DateFormattable.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
@@ -64,6 +65,7 @@
 		43A7A1B82826F342001E90C0 /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		43A7A1B92826F342001E90C0 /* Consumption+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataClass.swift"; sourceTree = "<group>"; };
 		43A7A1BA2826F342001E90C0 /* Consumption+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		43A7A1BF2826F465001E90C0 /* DateFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattable.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */,
+				43A7A1BF2826F465001E90C0 /* DateFormattable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
 				43A7A1B62826EE7F001E90C0 /* NumberFormattable.swift in Sources */,
+				43A7A1C02826F465001E90C0 /* DateFormattable.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
 				432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */,
 				43A7A1BC2826F342001E90C0 /* Challenge+CoreDataProperties.swift in Sources */,

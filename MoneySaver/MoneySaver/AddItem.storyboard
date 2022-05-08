@@ -79,7 +79,7 @@
                                     <segment title="$"/>
                                     <segment title="₩"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemGray4Color"/>
+                                <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="abc-OJ-oz7">
                                 <rect key="frame" x="40" y="359" width="334" height="32"/>
@@ -89,7 +89,7 @@
                                     <segment title="7Days"/>
                                     <segment title="30Days"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemGray4Color"/>
+                                <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KX8-v2-GdK"/>
@@ -160,9 +160,6 @@
         <namedColor name="MyWhite">
             <color red="0.96100002527236938" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

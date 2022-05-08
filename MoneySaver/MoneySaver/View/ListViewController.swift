@@ -41,7 +41,7 @@ final class ListViewController: UIViewController {
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
-extension ListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ListViewController: UITableViewDelegate, UITableViewDataSource, DateFormattable {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.challenges.value.count
     }
@@ -60,10 +60,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "~MM월dd일HH시"
-        let convert = dateFormatter.string(from: period)
-        cell.bind(title: title, period: convert, money: money, currency: currency)
+        let changedPeriod = changedDateFormat(date: period)
+        cell.bind(title: title, period: changedPeriod, money: money, currency: currency)
         
         return cell
     }
