@@ -69,8 +69,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource, DateFo
             return UITableViewCell()
         }
         
-        let changedPeriod = changedDateFormat(date: period)
-        cell.bind(title: title, period: changedPeriod, money: money, currency: currency)
+        cell.bind(title: title, period: period, money: money, currency: currency)
         
         return cell
     }

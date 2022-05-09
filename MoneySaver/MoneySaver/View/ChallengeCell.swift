@@ -13,12 +13,13 @@ class ChallengeCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
 }
 
-extension ChallengeCell: NumberFormattable {
-    func bind(title: String, period: String, money: Double, currency: String) {
+extension ChallengeCell: NumberFormattable, DateFormattable {
+    func bind(title: String, period: Date, money: Double, currency: String) {
         let changedNumber = changeNumberFormat(currency: currency, number: money)
+        let changedPeriod = changedDateFormat(date: period)
         itemLabel.text = title
         priceLabel.text = changedNumber
-        dateLabel.text = period
+        dateLabel.text = changedPeriod
     }
 }
 
