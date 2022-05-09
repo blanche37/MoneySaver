@@ -22,6 +22,7 @@
 		43A7A1BE2826F342001E90C0 /* Consumption+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1BA2826F342001E90C0 /* Consumption+CoreDataProperties.swift */; };
 		43A7A1C02826F465001E90C0 /* DateFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1BF2826F465001E90C0 /* DateFormattable.swift */; };
 		43A7A1C42828B0EE001E90C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1C32828B0EE001E90C0 /* DetailViewController.swift */; };
+		43A7A1C62828B593001E90C0 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1C52828B593001E90C0 /* InformationView.swift */; };
 		43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC7281FD46200FA1476 /* AppDelegate.swift */; };
 		43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */; };
 		43D9BACC281FD46200FA1476 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9BACB281FD46200FA1476 /* ListViewController.swift */; };
@@ -68,6 +69,7 @@
 		43A7A1BA2826F342001E90C0 /* Consumption+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Consumption+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		43A7A1BF2826F465001E90C0 /* DateFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattable.swift; sourceTree = "<group>"; };
 		43A7A1C32828B0EE001E90C0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		43A7A1C52828B593001E90C0 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		43D9BAC4281FD46200FA1476 /* MoneySaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneySaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D9BAC7281FD46200FA1476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D9BAC9281FD46200FA1476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				4385689E28223FCB0086A4AE /* ConsumptionCell.swift */,
 				432F1AD128228C410015F2B5 /* AddItemViewController.swift */,
 				43A7A1C32828B0EE001E90C0 /* DetailViewController.swift */,
+				43A7A1C52828B593001E90C0 /* InformationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				43A7A1C02826F465001E90C0 /* DateFormattable.swift in Sources */,
 				43D9BACA281FD46200FA1476 /* SceneDelegate.swift in Sources */,
 				432F1AD228228C410015F2B5 /* AddItemViewController.swift in Sources */,
+				43A7A1C62828B593001E90C0 /* InformationView.swift in Sources */,
 				43A7A1BC2826F342001E90C0 /* Challenge+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
