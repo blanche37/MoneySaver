@@ -40,25 +40,31 @@ final class AddItemViewController: UIViewController {
         presentingViewController?.dismiss(animated: true)
     }
     
-    @IBAction func addItem(_ sender: UIButton) {
-        presentingViewController?.dismiss(animated: true) { [weak self] in
-            guard let self = self,
-                  let currency = self.currencySegmentedControl.titleForSegment(at: self.currencySegmentedControl.selectedSegmentIndex),
-                  let expiration = self.periodSegmentedControl.titleForSegment(at: self.periodSegmentedControl.selectedSegmentIndex),
-                  let title = self.titleTextField.text,
-                  let money = self.moneyTextField.text.flatMap({Int($0)}) else {
-                return
-            }
+    @IBAction func done(_ sender: UIButton) {
+        if let navi = presentingViewController as? UINavigationController,
+           let _ = navi.viewControllers.last as? ListViewController {
+            presentingViewController?.dismiss(animated: true) { [weak self] in
+                guard let self = self,
+                      let currency = self.currencySegmentedControl.titleForSegment(at: self.currencySegmentedControl.selectedSegmentIndex),
+                      let expiration = self.periodSegmentedControl.titleForSegment(at: self.periodSegmentedControl.selectedSegmentIndex),
+                      let title = self.titleTextField.text,
+                      let money = self.moneyTextField.text.flatMap({Int($0)}) else {
+                    return
+                }
 
-            let expire: Date = self.expiration(expiration: expiration)
-            let challenge = Challenge(context: CoreDataStack.shared.viewContext)
-            challenge.setValue(title, forKey: "title")
-            challenge.setValue(expire, forKey: "period")
-            challenge.setValue(money, forKey: "money")
-            challenge.setValue(UUID(), forKey: "id")
-            challenge.setValue(currency, forKey: "currency")
-            self.viewModel.create(item: challenge)
-            self.refreshDelegate.refresh()
+                let expire: Date = self.expiration(expiration: expiration)
+                let challenge = Challenge(context: CoreDataStack.shared.viewContext)
+                challenge.setValue(title, forKey: "title")
+                challenge.setValue(expire, forKey: "period")
+                challenge.setValue(money, forKey: "money")
+                challenge.setValue(UUID(), forKey: "id")
+                challenge.setValue(currency, forKey: "currency")
+                self.viewModel.create(item: challenge)
+                self.refreshDelegate.refresh()
+            }
+        } else {
+            // 업데이트 기능
+            presentingViewController?.dismiss(animated: true)
         }
     }
     
