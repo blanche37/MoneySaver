@@ -169,7 +169,13 @@
                             <constraint firstItem="dUx-Wl-xcG" firstAttribute="bottom" secondItem="bGm-NK-gFs" secondAttribute="bottom" constant="34" id="vvE-b0-Nr5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3x0-S4-qaW"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3x0-S4-qaW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Wxc-GE-kK4">
+                            <connections>
+                                <action selector="updateChallenge:" destination="mMD-hH-3ky" id="cFp-sb-FkF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-Sf-KfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
