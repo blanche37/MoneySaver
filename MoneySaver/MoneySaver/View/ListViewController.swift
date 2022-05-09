@@ -85,6 +85,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource, DateFo
         }
         
         cell.isSelected = false
+        viewModel.challengeIndex = indexPath.row
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

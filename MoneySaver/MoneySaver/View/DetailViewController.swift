@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     // MARK: - Properties
     var viewModel: ViewModel!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - LifeCycles
     override func viewDidLoad() {

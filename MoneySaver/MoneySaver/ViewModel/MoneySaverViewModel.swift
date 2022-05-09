@@ -11,6 +11,7 @@ import CoreData
 protocol ViewModel {
     var challenges: Observable<[Challenge]> { get }
     var consumptions: Observable<[Consumption]> { get }
+    var challengeIndex: Int { get set }
     
     func create(item: NSManagedObject)
     func readChallenges()
@@ -23,6 +24,7 @@ final class MoneySaverViewModel: ViewModel {
     var service: Service!
     var challenges = Observable<[Challenge]>([])
     var consumptions = Observable<[Consumption]>([])
+    var challengeIndex: Int = 0
     
     // MARK: - Methods
     func create(item: NSManagedObject) {
