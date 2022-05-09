@@ -198,6 +198,12 @@
                                                 <constraint firstItem="Eob-Us-z7a" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dyV-RQ-Gs8" secondAttribute="trailing" id="vBg-ce-hbu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ItemLabel" destination="dyV-RQ-Gs8" id="mNi-LM-jry"/>
+                                            <outlet property="dateLabel" destination="cKo-sY-fdE" id="vXI-QZ-xbI"/>
+                                            <outlet property="itemLabel" destination="dyV-RQ-Gs8" id="N0e-Ig-fH3"/>
+                                            <outlet property="priceLabel" destination="8gJ-Oa-40l" id="AjH-aJ-YzU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
