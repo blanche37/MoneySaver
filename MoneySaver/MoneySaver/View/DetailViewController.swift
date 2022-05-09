@@ -17,7 +17,16 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func updateChallenge(_ sender: UIBarButtonItem) {
+    @IBAction func presentAddItemViewController(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "AddItem", bundle: nil)
+
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "a") as? UINavigationController,
+              let childVC = vc.viewControllers.first as? AddItemViewController else {
+            return
+        }
+        
+        childVC.title = "Update"
+        childVC.viewModel = viewModel
+        self.present(vc, animated: true)
     }
-    
 }

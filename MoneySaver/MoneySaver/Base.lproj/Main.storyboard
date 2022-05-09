@@ -172,7 +172,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3x0-S4-qaW">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Wxc-GE-kK4">
                             <connections>
-                                <action selector="updateChallenge:" destination="mMD-hH-3ky" id="cFp-sb-FkF"/>
+                                <action selector="presentAddItemViewController:" destination="mMD-hH-3ky" id="ZL3-3X-SJg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
