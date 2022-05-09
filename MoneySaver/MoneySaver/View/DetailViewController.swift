@@ -8,5 +8,9 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var viewModel: ViewModel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

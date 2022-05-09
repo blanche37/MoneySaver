@@ -38,6 +38,15 @@ final class ListViewController: UIViewController {
         childVC.refreshDelegate = self
         self.present(vc, animated: true)
     }
+    
+    // MARK: - Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DetailViewController else {
+            return
+        }
+        
+        destination.viewModel = viewModel
+    }
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
