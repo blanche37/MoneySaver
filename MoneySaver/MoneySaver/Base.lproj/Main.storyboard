@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +32,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83n-iG-5NP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-361" y="-167"/>
+            <point key="canvasLocation" x="-391" y="-234"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="a1S-vr-YPP">
@@ -53,7 +54,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-D5-jcm">
-                                                    <rect key="frame" x="20" y="8" width="183" height="47"/>
+                                                    <rect key="frame" x="20" y="8" width="365.5" height="47"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                                     <color key="textColor" name="MyBlue"/>
                                                     <nil key="highlightedColor"/>
@@ -76,6 +77,7 @@
                                                 <constraint firstItem="UcE-X2-001" firstAttribute="leading" secondItem="NqZ-D5-jcm" secondAttribute="leading" id="UFX-fl-pvB"/>
                                                 <constraint firstItem="UcE-X2-001" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gOv-jf-afn" secondAttribute="leading" id="c0t-lv-IcU"/>
                                                 <constraint firstItem="NqZ-D5-jcm" firstAttribute="leading" secondItem="giG-5d-eag" secondAttribute="leading" constant="20" id="ig6-MD-xEq"/>
+                                                <constraint firstAttribute="trailing" secondItem="NqZ-D5-jcm" secondAttribute="trailing" id="nzl-m1-GKP"/>
                                                 <constraint firstAttribute="bottom" secondItem="gOv-jf-afn" secondAttribute="bottom" constant="12" id="uDV-0c-XPz"/>
                                                 <constraint firstAttribute="bottom" secondItem="UcE-X2-001" secondAttribute="bottom" constant="8" id="wQs-S0-u5D"/>
                                                 <constraint firstItem="gOv-jf-afn" firstAttribute="trailing" secondItem="giG-5d-eag" secondAttribute="trailingMargin" id="xbE-RF-9jK"/>
@@ -86,6 +88,7 @@
                                             <outlet property="dateLabel" destination="gOv-jf-afn" id="HBQ-bw-M7h"/>
                                             <outlet property="itemLabel" destination="NqZ-D5-jcm" id="SL8-W2-n5l"/>
                                             <outlet property="priceLabel" destination="UcE-X2-001" id="H2r-d9-Ihe"/>
+                                            <segue destination="mMD-hH-3ky" kind="show" id="xwc-18-WT8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,7 +121,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrT-lx-UpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331.8840579710145" y="-167.41071428571428"/>
+            <point key="canvasLocation" x="422" y="-230"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="rE2-TF-7wS">
+            <objects>
+                <viewController id="mMD-hH-3ky" customClass="DetailViewController" customModule="MoneySaver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3s-K2-U4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bGm-NK-gFs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3x0-S4-qaW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-Sf-KfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="-234"/>
         </scene>
     </scenes>
     <resources>
@@ -134,5 +153,8 @@
         <namedColor name="MyWhite">
             <color red="0.96100002527236938" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
