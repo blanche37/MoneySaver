@@ -131,6 +131,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6th-vZ-WE4">
+                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MBg-LA-4te">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MBg-LA-4te" id="Ut4-1I-Hur">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUx-Wl-xcG" customClass="InformationView" customModule="MoneySaver" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="224" width="414" height="672"/>
                                 <subviews>
@@ -158,15 +172,19 @@
                         <viewLayoutGuide key="safeArea" id="bGm-NK-gFs"/>
                         <color key="backgroundColor" name="MyBlue"/>
                         <constraints>
+                            <constraint firstItem="6th-vZ-WE4" firstAttribute="leading" secondItem="bGm-NK-gFs" secondAttribute="leading" id="32z-Su-fc3"/>
+                            <constraint firstAttribute="bottom" secondItem="6th-vZ-WE4" secondAttribute="bottom" id="4CN-Of-a9r"/>
                             <constraint firstItem="dUx-Wl-xcG" firstAttribute="leading" secondItem="bGm-NK-gFs" secondAttribute="leading" id="4LE-8M-NmX"/>
                             <constraint firstItem="bGm-NK-gFs" firstAttribute="trailing" secondItem="dUx-Wl-xcG" secondAttribute="trailing" id="Cqz-d5-2Nf"/>
                             <constraint firstItem="dUx-Wl-xcG" firstAttribute="height" secondItem="E3s-K2-U4Q" secondAttribute="height" multiplier="3/4" id="UVk-yK-nBH"/>
                             <constraint firstItem="eRY-A2-RD6" firstAttribute="width" secondItem="E3s-K2-U4Q" secondAttribute="width" id="bNZ-d9-H0s"/>
                             <constraint firstItem="dUx-Wl-xcG" firstAttribute="width" secondItem="E3s-K2-U4Q" secondAttribute="width" id="dfk-QM-JnF"/>
                             <constraint firstItem="eRY-A2-RD6" firstAttribute="leading" secondItem="bGm-NK-gFs" secondAttribute="leading" id="fMZ-f9-feW"/>
+                            <constraint firstItem="bGm-NK-gFs" firstAttribute="trailing" secondItem="6th-vZ-WE4" secondAttribute="trailing" id="iK4-W2-FvK"/>
                             <constraint firstItem="eRY-A2-RD6" firstAttribute="bottom" secondItem="bGm-NK-gFs" secondAttribute="bottom" constant="34" id="jcH-oc-tzQ"/>
                             <constraint firstItem="bGm-NK-gFs" firstAttribute="trailing" secondItem="eRY-A2-RD6" secondAttribute="trailing" id="t06-4o-qel"/>
                             <constraint firstItem="dUx-Wl-xcG" firstAttribute="bottom" secondItem="bGm-NK-gFs" secondAttribute="bottom" constant="34" id="vvE-b0-Nr5"/>
+                            <constraint firstItem="6th-vZ-WE4" firstAttribute="height" secondItem="E3s-K2-U4Q" secondAttribute="height" multiplier="3/4" id="wax-K9-CQK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="3x0-S4-qaW">
