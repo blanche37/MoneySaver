@@ -14,7 +14,8 @@
 		436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF15281FF28800AF09BC /* MoneySaverService.swift */; };
 		436FCF19281FF69800AF09BC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF18281FF69800AF09BC /* Observable.swift */; };
 		436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */; };
-		4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385689E28223FCB0086A4AE /* ConsumptionCell.swift */; };
+		4385689F28223FCB0086A4AE /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385689E28223FCB0086A4AE /* ChallengeCell.swift */; };
+		439607422829008D0047EBF1 /* ConsumptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439607412829008D0047EBF1 /* ConsumptionCell.swift */; };
 		43A7A1B62826EE7F001E90C0 /* NumberFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */; };
 		43A7A1BB2826F342001E90C0 /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B72826F342001E90C0 /* Challenge+CoreDataClass.swift */; };
 		43A7A1BC2826F342001E90C0 /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7A1B82826F342001E90C0 /* Challenge+CoreDataProperties.swift */; };
@@ -61,7 +62,8 @@
 		436FCF15281FF28800AF09BC /* MoneySaverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverService.swift; sourceTree = "<group>"; };
 		436FCF18281FF69800AF09BC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		436FCF1A281FF94700AF09BC /* MoneySaverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySaverViewModel.swift; sourceTree = "<group>"; };
-		4385689E28223FCB0086A4AE /* ConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCell.swift; sourceTree = "<group>"; };
+		4385689E28223FCB0086A4AE /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
+		439607412829008D0047EBF1 /* ConsumptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCell.swift; sourceTree = "<group>"; };
 		43A7A1B52826EE7F001E90C0 /* NumberFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormattable.swift; sourceTree = "<group>"; };
 		43A7A1B72826F342001E90C0 /* Challenge+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataClass.swift"; sourceTree = "<group>"; };
 		43A7A1B82826F342001E90C0 /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -215,9 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				43D9BACB281FD46200FA1476 /* ListViewController.swift */,
-				4385689E28223FCB0086A4AE /* ConsumptionCell.swift */,
+				4385689E28223FCB0086A4AE /* ChallengeCell.swift */,
 				432F1AD128228C410015F2B5 /* AddItemViewController.swift */,
 				43A7A1C32828B0EE001E90C0 /* DetailViewController.swift */,
+				439607412829008D0047EBF1 /* ConsumptionCell.swift */,
 				43A7A1C52828B593001E90C0 /* InformationView.swift */,
 			);
 			path = View;
@@ -376,7 +379,7 @@
 			files = (
 				43A7A1BD2826F342001E90C0 /* Consumption+CoreDataClass.swift in Sources */,
 				436FCF19281FF69800AF09BC /* Observable.swift in Sources */,
-				4385689F28223FCB0086A4AE /* ConsumptionCell.swift in Sources */,
+				4385689F28223FCB0086A4AE /* ChallengeCell.swift in Sources */,
 				43A7A1BB2826F342001E90C0 /* Challenge+CoreDataClass.swift in Sources */,
 				436FCF1B281FF94700AF09BC /* MoneySaverViewModel.swift in Sources */,
 				43D9BAD2281FD46200FA1476 /* MoneySaver.xcdatamodeld in Sources */,
@@ -385,6 +388,7 @@
 				436FCF10281FE17500AF09BC /* SQLiteRepository.swift in Sources */,
 				43A7A1C42828B0EE001E90C0 /* DetailViewController.swift in Sources */,
 				43A7A1BE2826F342001E90C0 /* Consumption+CoreDataProperties.swift in Sources */,
+				439607422829008D0047EBF1 /* ConsumptionCell.swift in Sources */,
 				436FCF16281FF28800AF09BC /* MoneySaverService.swift in Sources */,
 				43D9BAC8281FD46200FA1476 /* AppDelegate.swift in Sources */,
 				43A7A1B62826EE7F001E90C0 /* NumberFormattable.swift in Sources */,

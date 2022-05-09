@@ -56,7 +56,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource, DateFo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "List", for: indexPath) as? ConsumptionCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "List", for: indexPath) as? ChallengeCell else {
             return UITableViewCell()
         }
         
