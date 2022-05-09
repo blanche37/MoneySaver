@@ -131,20 +131,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6th-vZ-WE4">
-                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MBg-LA-4te">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MBg-LA-4te" id="Ut4-1I-Hur">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUx-Wl-xcG" customClass="InformationView" customModule="MoneySaver" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="224" width="414" height="672"/>
                                 <subviews>
@@ -168,6 +154,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6th-vZ-WE4">
+                                <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="MBg-LA-4te" customClass="ConsumptionCell" customModule="MoneySaver" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MBg-LA-4te" id="Ut4-1I-Hur">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyV-RQ-Gs8">
+                                                    <rect key="frame" x="40" y="29" width="275" height="47"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                                    <color key="textColor" name="MyBlue"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Eob-Us-z7a">
+                                                    <rect key="frame" x="315" y="19" width="59" height="67"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Oa-40l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="32.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKo-sY-fdE">
+                                                            <rect key="frame" x="0.0" y="46.5" width="59" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eob-Us-z7a" firstAttribute="top" secondItem="Ut4-1I-Hur" secondAttribute="topMargin" constant="8" id="J0g-GV-1IE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Eob-Us-z7a" secondAttribute="trailing" constant="20" id="Tpm-Gk-7pC"/>
+                                                <constraint firstItem="dyV-RQ-Gs8" firstAttribute="centerY" secondItem="Ut4-1I-Hur" secondAttribute="centerY" id="bRv-2u-hXu"/>
+                                                <constraint firstItem="dyV-RQ-Gs8" firstAttribute="leading" secondItem="Ut4-1I-Hur" secondAttribute="leadingMargin" constant="20" id="pjb-3h-3HJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Eob-Us-z7a" secondAttribute="bottom" constant="8" id="s2i-Og-a38"/>
+                                                <constraint firstItem="Eob-Us-z7a" firstAttribute="leading" relation="lessThanOrEqual" secondItem="dyV-RQ-Gs8" secondAttribute="trailing" id="vBg-ce-hbu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bGm-NK-gFs"/>
                         <color key="backgroundColor" name="MyBlue"/>
@@ -200,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-Sf-KfS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="-230"/>
+            <point key="canvasLocation" x="1321.7391304347827" y="-230.35714285714283"/>
         </scene>
     </scenes>
     <resources>

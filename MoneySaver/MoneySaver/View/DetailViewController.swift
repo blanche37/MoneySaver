@@ -31,3 +31,10 @@ class DetailViewController: UIViewController {
         self.present(vc, animated: true)
     }
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+extension DetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 105
+    }
+}
